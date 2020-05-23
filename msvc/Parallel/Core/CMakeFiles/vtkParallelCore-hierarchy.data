@@ -1,0 +1,16 @@
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkCommunicator.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkDummyCommunicator.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkDummyController.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkFieldDataSerializer.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkMultiProcessController.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkMultiProcessStream.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkPDirectory.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkProcess.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkProcessGroup.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkPSystemTools.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkSocketCommunicator.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkSocketController.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkSubCommunicator.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkSubGroup.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/Parallel/Core/vtkThreadedTaskQueue.h;vtkParallelCore
+C:/Development/op3d_active/VTK-9.0.1/msvc/Parallel/Core/vtkParallelCoreModule.h;vtkParallelCore

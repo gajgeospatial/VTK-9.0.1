@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include=".\vtkDepthOfFieldPassFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkDepthPeelingPassFinalFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkDepthPeelingPassIntermediateFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkEDLBilateralFilterFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkEDLComposeFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkEDLShadeFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFXAAFilterFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperDepthFilterBiGaussFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperDepthFilterNarrowRangeFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperSurfaceNormalFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperThicknessAndVolumeColorFilterFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperFinalFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperGS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkFluidMapperVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkGaussianBlurPassFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkGaussianBlurPassVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkGlyph3DVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkOrderIndependentTranslucentPassFinalFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPointFillPassFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPointGaussianVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPointGaussianGS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPolyData2DFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPolyData2DVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPolyDataFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPolyDataVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkPolyDataWideLineGS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkSSAAPassFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkSimpleMotionBlurPassFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkSobelGradientMagnitudePass1FS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkSobelGradientMagnitudePass2FS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkSphereMapperGS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkStickMapperGS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkTextureObjectFS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkTextureObjectVS.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\vtkRenderingOpenGL2ObjectFactory.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkCameraPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkClearRGBPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkClearZPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkCompositePolyDataMapper2.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDefaultPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDepthImageProcessingPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDepthOfFieldPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDepthPeelingPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDualDepthPeelingPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkEDLShading.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkEquirectangularToCubeMapTexture.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkFramebufferPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkGaussianBlurPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkGenericOpenGLRenderWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkHiddenLineRemovalPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkImageProcessingPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkLightingMapPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkLightsPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpaquePass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLBillboardTextActor3D.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLBufferObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLCamera.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLCellToVTKCellMap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFXAAFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFXAAPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFluidMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFramebufferObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGL2PSHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGlyph3DHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGlyph3DMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLHardwareSelector.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageAlgorithmHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageSliceMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLIndexBufferObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLInstanceCulling.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLLabeledContourMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLLight.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPointGaussianMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPolyDataMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPolyDataMapper2D.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLQuadHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderTimer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderTimerLog.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderUtilities.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLShaderCache.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLShaderProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLSkybox.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLSphereMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLState.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLStickMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextActor3D.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextMapper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTexture.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLUniforms.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexArrayObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObjectCache.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObjectGroup.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOrderIndependentTranslucentPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkOverlayPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPanoramicProjectionPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPixelBufferObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPointFillPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPBRIrradianceTexture.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPBRLUTTexture.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkPBRPrefilterTexture.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkRenderPassCollection.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkRenderStepsPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkRenderbuffer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkSSAAPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkSSAOPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkSequencePass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkShader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkShaderProgram.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkShadowMapBakerPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkShadowMapPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkSimpleMotionBlurPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkSobelGradientMagnitudePass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkTextureObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkTextureUnitManager.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkToneMappingPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkTransformFeedback.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkTranslucentPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkValuePass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkVolumetricPass.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDataTransferHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkDummyGPUInfoList.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Rendering\OpenGL2\vtkWin32OpenGLRenderWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkCompositePolyDataMapper2Internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkStateStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkOpenGLError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkRenderingOpenGLConfigure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkTestOpenGLVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkCameraPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkClearRGBPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkClearZPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkCompositePolyDataMapper2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDefaultPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDepthImageProcessingPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDepthOfFieldPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDepthPeelingPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDualDepthPeelingPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkEDLShading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkEquirectangularToCubeMapTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkFramebufferPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkGaussianBlurPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkGenericOpenGLRenderWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkHiddenLineRemovalPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkImageProcessingPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkLightingMapPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkLightsPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpaquePass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLBillboardTextActor3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLCellToVTKCellMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFXAAFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFXAAPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFluidMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLFramebufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGL2PSHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGlyph3DHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLGlyph3DMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLHardwareSelector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageAlgorithmHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLImageSliceMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLIndexBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLInstanceCulling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLLabeledContourMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPointGaussianMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPolyDataMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLPolyDataMapper2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLQuadHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderTimerLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLShaderCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLShaderProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLSkybox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLSphereMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLStickMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextActor3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTextMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLUniforms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexArrayObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObjectCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOpenGLVertexBufferObjectGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOrderIndependentTranslucentPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkOverlayPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPanoramicProjectionPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPixelBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPointFillPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPBRIrradianceTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPBRLUTTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkPBRPrefilterTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkRenderPassCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkRenderStepsPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkRenderbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkSSAAPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkSSAOPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkSequencePass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkShaderProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkShadowMapBakerPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkShadowMapPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkSimpleMotionBlurPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkSobelGradientMagnitudePass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkTextureObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkTextureUnitManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkToneMappingPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkTransformFeedback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkTranslucentPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkValuePass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkVolumetricPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDataTransferHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkDummyGPUInfoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Rendering\OpenGL2\vtkWin32OpenGLRenderWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkRenderingOpenGL2Module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkDepthOfFieldPassFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkDepthPeelingPassFinalFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkDepthPeelingPassIntermediateFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkEDLBilateralFilterFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkEDLComposeFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkEDLShadeFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFXAAFilterFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperDepthFilterBiGaussFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperDepthFilterNarrowRangeFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperSurfaceNormalFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperThicknessAndVolumeColorFilterFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperFinalFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkFluidMapperVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkGaussianBlurPassFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkGaussianBlurPassVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkGlyph3DVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkOrderIndependentTranslucentPassFinalFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPointFillPassFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPointGaussianVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPointGaussianGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPolyData2DFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPolyData2DVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPolyDataFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPolyDataVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkPolyDataWideLineGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkSSAAPassFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkSimpleMotionBlurPassFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkSobelGradientMagnitudePass1FS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkSobelGradientMagnitudePass2FS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkSphereMapperGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkStickMapperGS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkTextureObjectFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkTextureObjectVS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include=".\vtkRenderingOpenGL2ObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkDepthOfFieldPassFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkDepthPeelingPassFinalFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkDepthPeelingPassIntermediateFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkEDLBilateralFilterFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkEDLComposeFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkEDLShadeFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFXAAFilterFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperDepthFilterBiGaussFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperDepthFilterNarrowRangeFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperSurfaceNormalFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperThicknessAndVolumeColorFilterFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperFinalFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperGS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkFluidMapperVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkGaussianBlurPassFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkGaussianBlurPassVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkGlyph3DVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkOrderIndependentTranslucentPassFinalFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPointFillPassFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPointGaussianVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPointGaussianGS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPolyData2DFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPolyData2DVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPolyDataFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPolyDataVS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkPolyDataWideLineGS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkSSAAPassFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkSimpleMotionBlurPassFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkSobelGradientMagnitudePass1FS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkSobelGradientMagnitudePass2FS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkSphereMapperGS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkStickMapperGS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkTextureObjectFS.h.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\e1c1b69cf5c17da50c3920067acb3d10\vtkTextureObjectVS.h.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{247F16D2-B3BE-3083-A14F-ECB36CD31502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2F80BAA1-5E15-368D-8A2A-331A107085CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

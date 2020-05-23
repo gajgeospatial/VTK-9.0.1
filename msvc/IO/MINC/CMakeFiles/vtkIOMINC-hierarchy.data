@@ -1,0 +1,11 @@
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMINC.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMINCImageAttributes.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMINCImageReader.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMINCImageWriter.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNIObjectReader.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNIObjectWriter.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNITagPointReader.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNITagPointWriter.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNITransformReader.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/IO/MINC/vtkMNITransformWriter.h;vtkIOMINC
+C:/Development/op3d_active/VTK-9.0.1/msvc/IO/MINC/vtkIOMINCModule.h;vtkIOMINC

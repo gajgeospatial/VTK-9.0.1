@@ -1,0 +1,2971 @@
+Performing C++ SOURCE FILE Test VTK_REQUIRE_LARGE_FILE_SUPPORT failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_023d1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D VTK_REQUIRE_LARGE_FILE_SUPPORT /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_023d1.dir\Debug\\" /Fd"cmTC_023d1.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx"
+  src.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(13): warning C4293: '<<': shift count negative or too big, undefined behavior [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_023d1.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(13): warning C4127: conditional expression is constant [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_023d1.vcxproj]
+  C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(13): note: consider using 'if constexpr' statement instead
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(19): error C3861: 'S_ISREG': identifier not found [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_023d1.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(23): error C3861: 'ftello': identifier not found [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_023d1.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_023d1.vcxproj]
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+
+...and run output:
+
+Return value: 1
+Source file was:
+#define _LARGEFILE_SOURCE
+#define _LARGE_FILES
+#define _FILE_OFFSET_BITS 64
+#include <cassert>
+#include <cstdio>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+int main(int, char** argv)
+{
+  // check that off_t can hold 2^63 - 1 and perform basic operations...
+#define OFF_T_64 (((off_t)1 << 62) - 1 + ((off_t)1 << 62))
+  if (OFF_T_64 % 2147483647 != 1)
+    return 1;
+
+  // stat breaks on SCO OpenServer
+  struct stat buf;
+  stat(argv[0], &buf);
+  if (!S_ISREG(buf.st_mode))
+    return 2;
+
+  FILE* file = fopen(argv[0], "r");
+  off_t offset = ftello(file);
+  fseek(file, offset, SEEK_CUR);
+  fclose(file);
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_75380.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_75380.dir\Debug\\" /Fd"cmTC_75380.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx"
+  src.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(1): error C2065: '__deprecated__': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_75380.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_75380.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.cxx(1): error C2448: '__attribute__': function-style initializer appears to be a function definition [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_75380.vcxproj]
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Checking whether long and __int64 are the same type failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_fa824.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_SAME_LONG_AND___INT64 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fa824.dir\Debug\\" /Fd"cmTC_fa824.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(70): error C2664: 'void function(long **)': cannot convert argument 1 from '__int64 **' to 'long **' [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_fa824.vcxproj]
+  C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(70): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+
+
+Checking whether C compiler has ssize_t in unistd.h failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_acfdf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_C_HAS_SSIZE_T /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_acfdf.dir\Debug\\" /Fd"cmTC_acfdf.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsC.c"
+  kwsysPlatformTestsC.c
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsC.c(46): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_acfdf.vcxproj]
+
+
+Checking whether C compiler has clock_gettime failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_6b5c0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_C_HAS_CLOCK_GETTIME_MONOTONIC /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6b5c0.dir\Debug\\" /Fd"cmTC_6b5c0.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsC.c"
+  kwsysPlatformTestsC.c
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsC.c(69): warning C4013: 'clock_gettime' undefined; assuming extern returning int [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_6b5c0.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsC.c(69): error C2065: 'CLOCK_MONOTONIC': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_6b5c0.vcxproj]
+
+
+Checking whether CXX compiler has setenv failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_abe8a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_SETENV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_abe8a.dir\Debug\\" /Fd"cmTC_abe8a.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(143): error C3861: 'setenv': identifier not found [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_abe8a.vcxproj]
+
+
+Checking whether CXX compiler has unsetenv failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_78143.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_UNSETENV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_78143.dir\Debug\\" /Fd"cmTC_78143.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(151): error C3861: 'unsetenv': identifier not found [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_78143.vcxproj]
+
+
+Checking whether CXX compiler has utimes failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_955a2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_UTIMES /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_955a2.dir\Debug\\" /Fd"cmTC_955a2.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(215): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_955a2.vcxproj]
+
+
+Checking whether CXX compiler has utimensat failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b0458.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_UTIMENSAT /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b0458.dir\Debug\\" /Fd"cmTC_b0458.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(234): error C2079: 'times' uses undefined struct 'main::timespec' [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(234): error C2065: 'UTIME_OMIT': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(234): error C2065: 'UTIME_NOW': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(234): error C2440: 'initializing': cannot convert from 'initializer list' to 'int' [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+  C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(234): note: The initializer contains too many elements
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(235): error C2065: 'AT_FDCWD': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(235): error C2065: 'AT_SYMLINK_NOFOLLOW': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(235): error C3861: 'utimensat': identifier not found [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_b0458.vcxproj]
+
+
+Checking whether CXX compiler struct stat has st_mtim member failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_26fa5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_STAT_HAS_ST_MTIM /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_26fa5.dir\Debug\\" /Fd"cmTC_26fa5.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(39): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_26fa5.vcxproj]
+
+
+Checking whether CXX compiler struct stat has st_mtimespec member failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_a7ee8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_STAT_HAS_ST_MTIMESPEC /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a7ee8.dir\Debug\\" /Fd"cmTC_a7ee8.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(53): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_a7ee8.vcxproj]
+
+
+Determining if files sys/types.h;ifaddrs.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_c325d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c325d.dir\Debug\\" /Fd"cmTC_c325d.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\KWSYS_SYS_HAS_IFADDRS_H.c"
+  KWSYS_SYS_HAS_IFADDRS_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\KWSYS_SYS_HAS_IFADDRS_H.c(3): fatal error C1083: Cannot open include file: 'ifaddrs.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_c325d.vcxproj]
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ifaddrs.h>
+
+
+int main(void){return 0;}
+
+Checking whether CXX compiler has rlimit64 failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_95d01.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_RLIMIT64 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_95d01.dir\Debug\\" /Fd"cmTC_95d01.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(179): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_95d01.vcxproj]
+
+
+Checking whether <ext/stdio_filebuf.h> is available failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_93ab1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W4 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_KWSYS_CXX_HAS_EXT_STDIO_FILEBUF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_93ab1.dir\Debug\\" /Fd"cmTC_93ab1.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx"
+  kwsysPlatformTestsCXX.cxx
+  
+C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys\vtksys\kwsysPlatformTestsCXX.cxx(330): fatal error C1083: Cannot open include file: 'ext/stdio_filebuf.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys\vtksys\CMakeFiles\CMakeTmp\cmTC_93ab1.vcxproj]
+
+
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_002a1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_002a1.dir\Debug\\" /Fd"cmTC_002a1.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_002a1.vcxproj]
+
+
+Determining if the finite exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_25866.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25866.dir\Debug\\" /Fd"cmTC_25866.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'finite': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_25866.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef finite
+  return ((int*)(&finite))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the feenableexcept exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_3a108.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D _GNU_SOURCE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3a108.dir\Debug\\" /Fd"cmTC_3a108.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'feenableexcept': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3a108.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <fenv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef feenableexcept
+  return ((int*)(&feenableexcept))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function getsockname exists in the socket failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_cded9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getsockname /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cded9.dir\Debug\\" /Fd"cmTC_cded9.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+LINK : fatal error LNK1104: cannot open file 'socket.lib' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_cded9.vcxproj]
+
+
+Determining if the SO_REUSEADDR exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_4a104.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4a104.dir\Debug\\" /Fd"cmTC_4a104.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(3): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4a104.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SO_REUSEADDR
+  return ((int*)(&SO_REUSEADDR))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file strings.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_42b3c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_42b3c.dir\Debug\\" /Fd"cmTC_42b3c.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_42b3c.vcxproj]
+
+
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_cdce7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cdce7.dir\Debug\\" /Fd"cmTC_cdce7.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'byteswap.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_cdce7.vcxproj]
+
+
+Determining if the include file sys/endian.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_5c155.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c155.dir\Debug\\" /Fd"cmTC_5c155.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'sys/endian.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c155.vcxproj]
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_94902.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94902.dir\Debug\\" /Fd"cmTC_94902.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c"
+  OFF64_T.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c(25): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94902.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c(26): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94902.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c(27): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94902.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c(28): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94902.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\OFF64_T.c(29): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94902.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ab660.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab660.dir\Debug\\" /Fd"cmTC_ab660.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ab660.vcxproj]
+
+
+Determining if the include file dlfcn.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_58d96.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58d96.dir\Debug\\" /Fd"cmTC_58d96.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'dlfcn.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_58d96.vcxproj]
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_29bb3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_29bb3.dir\Debug\\" /Fd"cmTC_29bb3.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_29bb3.vcxproj]
+
+
+Determining if the getpagesize exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_2f5a5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2f5a5.dir\Debug\\" /Fd"cmTC_2f5a5.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_2f5a5.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpagesize
+  return ((int*)(&getpagesize))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the bcopy exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_5c75c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c75c.dir\Debug\\" /Fd"cmTC_5c75c.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c75c.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <strings.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef bcopy
+  return ((int*)(&bcopy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mmap exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_04638.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_04638.dir\Debug\\" /Fd"cmTC_04638.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'sys/mman.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_04638.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/mman.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mmap
+  return ((int*)(&mmap))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getrandom exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_47c85.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_47c85.dir\Debug\\" /Fd"cmTC_47c85.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'sys/random.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_47c85.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/random.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrandom
+  return ((int*)(&getrandom))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the arc4random_buf exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_59740.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_59740.dir\Debug\\" /Fd"cmTC_59740.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'arc4random_buf': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_59740.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random_buf
+  return ((int*)(&arc4random_buf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the arc4random exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_abadf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abadf.dir\Debug\\" /Fd"cmTC_abadf.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'arc4random': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abadf.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random
+  return ((int*)(&arc4random))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the off_t exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b173a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b173a.dir\Debug\\" /Fd"cmTC_b173a.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2275: 'off_t': illegal use of this type as an expression [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b173a.vcxproj]
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys/types.h(42): note: see declaration of 'off_t'
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef off_t
+  return ((int*)(&off_t))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the size_t exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_517bb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_517bb.dir\Debug\\" /Fd"cmTC_517bb.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2275: 'size_t': illegal use of this type as an expression [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_517bb.vcxproj]
+  C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c: note: see declaration of 'size_t'
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef size_t
+  return ((int*)(&size_t))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_SYSCALL_GETRANDOM failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_02d18.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D HAVE_SYSCALL_GETRANDOM /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_02d18.dir\Debug\\" /Fd"cmTC_02d18.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_02d18.vcxproj]
+
+Source file was:
+
+        #include <stdlib.h>  /* for NULL */
+        #include <unistd.h>  /* for syscall */
+        #include <sys/syscall.h>  /* for SYS_getrandom */
+        int main() {
+            syscall(SYS_getrandom, NULL, 0, 0);
+            return 0;
+        }
+Performing C SOURCE FILE Test FLAG_NO_STRICT_ALIASING failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e39b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D FLAG_NO_STRICT_ALIASING /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e39b6.dir\Debug\\" /Fd"cmTC_e39b6.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -fno-strict-aliasing "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+cl : Command line warning D9002: ignoring unknown option '-fno-strict-aliasing' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e39b6.vcxproj]
+  cmTC_e39b6.vcxproj -> C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_e39b6.exe
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_LD_VERSION_SCRIPT failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e7488.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D HAVE_LD_VERSION_SCRIPT /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e7488.dir\Debug\\" /Fd"cmTC_e7488.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -Wl,--version-script=C:/Development/op3d_active/VTK-9.0.1/msvc/ThirdParty/tiff/vtktiff/conftest.map "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+cl : Command line error D8021: invalid numeric argument '/Wl,--version-script=C:/Development/op3d_active/VTK-9.0.1/msvc/ThirdParty/tiff/vtktiff/conftest.map' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e7488.vcxproj]
+
+Source file was:
+int main(void){return 0;}
+Performing C SOURCE FILE Test TIME_WITH_SYS_TIME failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_966b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TIME_WITH_SYS_TIME /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_966b6.dir\Debug\\" /Fd"cmTC_966b6.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_966b6.vcxproj]
+
+Source file was:
+
+#include <sys/time.h>
+#include <time.h>
+int main(void){return 0;}
+Determining if the strcasecmp exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_a0aa7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a0aa7.dir\Debug\\" /Fd"cmTC_a0aa7.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_a0aa7.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <strings.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if files ;sys/file.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_3680d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3680d.dir\Debug\\" /Fd"cmTC_3680d.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_FILE_H.c"
+  H5_HAVE_SYS_FILE_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_FILE_H.c(2): fatal error C1083: Cannot open include file: 'sys/file.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3680d.vcxproj]
+
+Source:
+/* */
+#include <sys/file.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;sys/ioctl.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e732f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e732f.dir\Debug\\" /Fd"cmTC_e732f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_IOCTL_H.c"
+  H5_HAVE_SYS_IOCTL_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_IOCTL_H.c(2): fatal error C1083: Cannot open include file: 'sys/ioctl.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e732f.vcxproj]
+
+Source:
+/* */
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;sys/resource.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_5668f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5668f.dir\Debug\\" /Fd"cmTC_5668f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_RESOURCE_H.c"
+  H5_HAVE_SYS_RESOURCE_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_RESOURCE_H.c(2): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5668f.vcxproj]
+
+Source:
+/* */
+#include <sys/resource.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/time.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_cea67.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cea67.dir\Debug\\" /Fd"cmTC_cea67.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_TIME_H.c"
+  H5_HAVE_SYS_TIME_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_SYS_TIME_H.c(3): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_cea67.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;features.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_9c7e8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c7e8.dir\Debug\\" /Fd"cmTC_9c7e8.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_FEATURES_H.c"
+  H5_HAVE_FEATURES_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_FEATURES_H.c(4): fatal error C1083: Cannot open include file: 'features.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9c7e8.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <features.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;dirent.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_65782.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_65782.dir\Debug\\" /Fd"cmTC_65782.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_DIRENT_H.c"
+  H5_HAVE_DIRENT_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_DIRENT_H.c(4): fatal error C1083: Cannot open include file: 'dirent.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_65782.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;setjmp.h;stddef.h;stdint.h;unistd.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_d281f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d281f.dir\Debug\\" /Fd"cmTC_d281f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_UNISTD_H.c"
+  H5_HAVE_UNISTD_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_UNISTD_H.c(7): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_d281f.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <setjmp.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;setjmp.h;stddef.h;stdint.h;mach/mach_time.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_f451b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f451b.dir\Debug\\" /Fd"cmTC_f451b.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_MACH_MACH_TIME_H.c"
+  H5_HAVE_MACH_MACH_TIME_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_MACH_MACH_TIME_H.c(7): fatal error C1083: Cannot open include file: 'mach/mach_time.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_f451b.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <setjmp.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <mach/mach_time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;setjmp.h;stddef.h;stdint.h;io.h;winsock2.h;pthread.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ce805.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce805.dir\Debug\\" /Fd"cmTC_ce805.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_PTHREAD_H.c"
+  H5_HAVE_PTHREAD_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_PTHREAD_H.c(9): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ce805.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <setjmp.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <io.h>
+#include <winsock2.h>
+#include <pthread.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/stat.h;sys/types.h;setjmp.h;stddef.h;stdint.h;io.h;winsock2.h;dlfcn.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_75fe9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_75fe9.dir\Debug\\" /Fd"cmTC_75fe9.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_DLFCN_H.c"
+  H5_HAVE_DLFCN_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\H5_HAVE_DLFCN_H.c(9): fatal error C1083: Cannot open include file: 'dlfcn.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_75fe9.vcxproj]
+
+Source:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <setjmp.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <io.h>
+#include <winsock2.h>
+#include <dlfcn.h>
+
+
+int main(void){return 0;}
+
+Determining if files quadmath.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ece16.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ece16.dir\Debug\\" /Fd"cmTC_ece16.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\C_HAVE_QUADMATH.c"
+  C_HAVE_QUADMATH.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\C_HAVE_QUADMATH.c(2): fatal error C1083: Cannot open include file: 'quadmath.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ece16.vcxproj]
+
+Source:
+/* */
+#include <quadmath.h>
+
+
+int main(void){return 0;}
+
+Determining size of ssize_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_6491a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6491a.dir\Debug\\" /Fd"cmTC_6491a.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c"
+  H5_SIZEOF_SSIZE_T.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c(25): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6491a.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c(26): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6491a.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c(27): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6491a.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c(28): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6491a.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_SSIZE_T.c(29): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6491a.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/H5_SIZEOF_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_94355.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94355.dir\Debug\\" /Fd"cmTC_94355.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c"
+  H5_SIZEOF_OFF64_T.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c(25): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94355.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c(26): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94355.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c(27): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94355.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c(28): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94355.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF_OFF64_T.c(29): error C2065: 'off64_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_94355.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/H5_SIZEOF_OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function alarm exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_40b1b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=alarm /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40b1b.dir\Debug\\" /Fd"cmTC_40b1b.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol alarm referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_40b1b.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_40b1b.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_40b1b.vcxproj]
+
+
+Determining if the function fcntl exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_98fef.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fcntl /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_98fef.dir\Debug\\" /Fd"cmTC_98fef.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol fcntl referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_98fef.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_98fef.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_98fef.vcxproj]
+
+
+Determining if the function flock exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_4bd7f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=flock /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4bd7f.dir\Debug\\" /Fd"cmTC_4bd7f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol flock referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4bd7f.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_4bd7f.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4bd7f.vcxproj]
+
+
+Determining if the function fork exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_a2859.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fork /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a2859.dir\Debug\\" /Fd"cmTC_a2859.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol fork referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_a2859.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_a2859.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_a2859.vcxproj]
+
+
+Determining if the function frexpf exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_f2946.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=frexpf /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f2946.dir\Debug\\" /Fd"cmTC_f2946.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol frexpf referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_f2946.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_f2946.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_f2946.vcxproj]
+
+
+Determining if the function frexpl exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_aceff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=frexpl /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_aceff.dir\Debug\\" /Fd"cmTC_aceff.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol frexpl referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_aceff.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_aceff.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_aceff.vcxproj]
+
+
+Determining if the function getrusage exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_9d0bc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getrusage /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9d0bc.dir\Debug\\" /Fd"cmTC_9d0bc.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol getrusage referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9d0bc.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_9d0bc.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9d0bc.vcxproj]
+
+
+Determining if the function pread exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_9d2a9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pread /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9d2a9.dir\Debug\\" /Fd"cmTC_9d2a9.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol pread referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9d2a9.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_9d2a9.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9d2a9.vcxproj]
+
+
+Determining if the function pwrite exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_c79e0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pwrite /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c79e0.dir\Debug\\" /Fd"cmTC_c79e0.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol pwrite referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_c79e0.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_c79e0.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_c79e0.vcxproj]
+
+
+Determining if the function rand_r exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_08906.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=rand_r /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_08906.dir\Debug\\" /Fd"cmTC_08906.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol rand_r referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_08906.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_08906.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_08906.vcxproj]
+
+
+Determining if the function random exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_a39dd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=random /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a39dd.dir\Debug\\" /Fd"cmTC_a39dd.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol random referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_a39dd.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_a39dd.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_a39dd.vcxproj]
+
+
+Determining if the function setsysinfo exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e53bb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=setsysinfo /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e53bb.dir\Debug\\" /Fd"cmTC_e53bb.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol setsysinfo referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e53bb.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_e53bb.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e53bb.vcxproj]
+
+
+Determining if the function siglongjmp exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_dee0f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=siglongjmp /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dee0f.dir\Debug\\" /Fd"cmTC_dee0f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol siglongjmp referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_dee0f.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_dee0f.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_dee0f.vcxproj]
+
+
+Determining if the function sigsetjmp exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b1981.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sigsetjmp /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b1981.dir\Debug\\" /Fd"cmTC_b1981.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol sigsetjmp referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b1981.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_b1981.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b1981.vcxproj]
+
+
+Determining if the function sigprocmask exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e017d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sigprocmask /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e017d.dir\Debug\\" /Fd"cmTC_e017d.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol sigprocmask referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e017d.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_e017d.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e017d.vcxproj]
+
+
+Determining if the function symlink exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_1e917.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=symlink /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1e917.dir\Debug\\" /Fd"cmTC_1e917.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol symlink referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_1e917.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_1e917.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_1e917.vcxproj]
+
+
+Determining if the function asprintf exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_5fa8b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=asprintf /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5fa8b.dir\Debug\\" /Fd"cmTC_5fa8b.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol asprintf referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5fa8b.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_5fa8b.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5fa8b.vcxproj]
+
+
+Determining if the function vasprintf exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_16f52.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=vasprintf /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_16f52.dir\Debug\\" /Fd"cmTC_16f52.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol vasprintf referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_16f52.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_16f52.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_16f52.vcxproj]
+
+
+Determining if the function waitpid exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_12739.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=waitpid /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_12739.dir\Debug\\" /Fd"cmTC_12739.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol waitpid referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_12739.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_12739.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_12739.vcxproj]
+
+
+Determining if the sigsetjmp exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b4eb1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b4eb1.dir\Debug\\" /Fd"cmTC_b4eb1.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'sigsetjmp': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b4eb1.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <setjmp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sigsetjmp
+  return ((int*)(&sigsetjmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing Other Test HAVE___INLINE__ failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_4b269.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D HAVE___INLINE__ /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D HAVE_SYS_TYPES_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4b269.dir\Debug\\" /Fd"cmTC_4b269.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c"
+  HDFTests.c
+  
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(429): error C2054: expected '(' to follow '__inline__' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(429): error C2085: 'static_foo': not in formal parameter list [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(429): error C2143: syntax error: missing ';' before '{' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(430): error C2054: expected '(' to follow '__inline__' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(430): error C2085: 'foo': not in formal parameter list [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake_ext_mod\HDFTests.c(430): error C2143: syntax error: missing ';' before '{' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_4b269.vcxproj]
+
+Determining size of __float128 failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_5c328.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c328.dir\Debug\\" /Fd"cmTC_5c328.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c"
+  H5_SIZEOF___FLOAT128.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c(26): error C2065: '__float128': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c328.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c(27): error C2065: '__float128': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c328.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c(28): error C2065: '__float128': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c328.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c(29): error C2065: '__float128': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c328.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF___FLOAT128.c(30): error C2065: '__float128': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_5c328.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/H5_SIZEOF___FLOAT128.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdbool.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__float128))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of _Quad failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_3f04d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D WIN32_LEAN_AND_MEAN=1 /D NOGDI=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3f04d.dir\Debug\\" /Fd"cmTC_3f04d.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c"
+  H5_SIZEOF__QUAD.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c(26): error C2065: '_Quad': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3f04d.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c(27): error C2065: '_Quad': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3f04d.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c(28): error C2065: '_Quad': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3f04d.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c(29): error C2065: '_Quad': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3f04d.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\H5_SIZEOF__QUAD.c(30): error C2065: '_Quad': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3f04d.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/H5_SIZEOF__QUAD.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdbool.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(_Quad))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Test H5_LDOUBLE_TO_LONG_SPECIAL Run failed with the following output and exit code:
+ Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_501a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D H5_LDOUBLE_TO_LONG_SPECIAL_TEST /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_501a4.dir\Debug\\" /Fd"cmTC_501a4.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c"
+  ConversionTests.c
+  
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(78): warning C4102: 'done': unreferenced label [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_501a4.vcxproj]
+  cmTC_501a4.vcxproj -> C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_501a4.exe
+
+Test H5_LONG_TO_LDOUBLE_SPECIAL Run failed with the following output and exit code:
+ Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ed2da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D H5_LONG_TO_LDOUBLE_SPECIAL_TEST /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ed2da.dir\Debug\\" /Fd"cmTC_ed2da.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c"
+  ConversionTests.c
+  
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(108): warning C4305: '=': truncation from '__int64' to 'long' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ed2da.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(141): warning C4102: 'done': unreferenced label [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ed2da.vcxproj]
+  cmTC_ed2da.vcxproj -> C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_ed2da.exe
+
+Test H5_DISABLE_SOME_LDOUBLE_CONV Compile failed with the following output:
+ Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_0cb9b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D H5_DISABLE_SOME_LDOUBLE_CONV_TEST /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0cb9b.dir\Debug\\" /Fd"cmTC_0cb9b.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c"
+  ConversionTests.c
+  
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(301): warning C4013: 'popen' undefined; assuming extern returning int [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(301): warning C4047: '=': 'FILE *' differs in levels of indirection from 'int' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\config\cmake\ConversionTests.c(305): warning C4013: 'pclose' undefined; assuming extern returning int [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+ConversionTests.obj : error LNK2019: unresolved external symbol popen referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+ConversionTests.obj : error LNK2019: unresolved external symbol pclose referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_0cb9b.exe : fatal error LNK1120: 2 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0cb9b.vcxproj]
+
+Determining size of u_int16_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_abd80.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abd80.dir\Debug\\" /Fd"cmTC_abd80.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c"
+  U_INT16_SIZE.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c(25): error C2065: 'u_int16_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abd80.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c(26): error C2065: 'u_int16_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abd80.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c(27): error C2065: 'u_int16_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abd80.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c(28): error C2065: 'u_int16_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abd80.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT16_SIZE.c(29): error C2065: 'u_int16_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_abd80.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/U_INT16_SIZE.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(u_int16_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of u_int32_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_9cb92.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9cb92.dir\Debug\\" /Fd"cmTC_9cb92.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c"
+  U_INT32_SIZE.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c(25): error C2065: 'u_int32_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9cb92.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c(26): error C2065: 'u_int32_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9cb92.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c(27): error C2065: 'u_int32_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9cb92.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c(28): error C2065: 'u_int32_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9cb92.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\U_INT32_SIZE.c(29): error C2065: 'u_int32_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_9cb92.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/U_INT32_SIZE.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(u_int32_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test have_flag_logical-op-parentheses failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_8e2b8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "have_flag_logical-op-parentheses" /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8e2b8.dir\Debug\\" /Fd"cmTC_8e2b8.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -Wno-logical-op-parentheses "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+cl : Command line error D8021: invalid numeric argument '/Wno-logical-op-parentheses' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_8e2b8.vcxproj]
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test have_flag_parentheses failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_0fbb5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D have_flag_parentheses /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0fbb5.dir\Debug\\" /Fd"cmTC_0fbb5.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -Wno-parentheses "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+cl : Command line error D8021: invalid numeric argument '/Wno-parentheses' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0fbb5.vcxproj]
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test have_flag_shift-op-parentheses failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_0fb97.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "have_flag_shift-op-parentheses" /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0fb97.dir\Debug\\" /Fd"cmTC_0fb97.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -Wno-shift-op-parentheses "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+cl : Command line error D8021: invalid numeric argument '/Wno-shift-op-parentheses' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0fb97.vcxproj]
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test have_flag_tautological-compare failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_e1abf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "have_flag_tautological-compare" /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e1abf.dir\Debug\\" /Fd"cmTC_e1abf.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj -Wno-tautological-compare "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\src.c"
+cl : Command line error D8021: invalid numeric argument '/Wno-tautological-compare' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_e1abf.vcxproj]
+
+Source file was:
+int main(void) { return 0; }
+Determining if the alloca exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_16941.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_16941.dir\Debug\\" /Fd"cmTC_16941.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'alloca.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_16941.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <alloca.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fsync exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_04ceb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_04ceb.dir\Debug\\" /Fd"cmTC_04ceb.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_04ceb.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fsync
+  return ((int*)(&fsync))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mktemp exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_bf0a1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bf0a1.dir\Debug\\" /Fd"cmTC_bf0a1.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'mktemp': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_bf0a1.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mktemp
+  return ((int*)(&mktemp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getrlimit exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_831c7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_831c7.dir\Debug\\" /Fd"cmTC_831c7.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_831c7.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+#include <sys/resource.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrlimit
+  return ((int*)(&getrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the random exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b67fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b67fc.dir\Debug\\" /Fd"cmTC_b67fc.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'random': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b67fc.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef random
+  return ((int*)(&random))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strndup exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_b44b5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b44b5.dir\Debug\\" /Fd"cmTC_b44b5.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'strndup': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_b44b5.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strndup
+  return ((int*)(&strndup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strlcat exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_42ed5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_42ed5.dir\Debug\\" /Fd"cmTC_42ed5.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'strlcat': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_42ed5.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the st_blocksize exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_67870.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67870.dir\Debug\\" /Fd"cmTC_67870.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8): error C2065: 'st_blocksize': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_67870.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/stat.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef st_blocksize
+  return ((int*)(&st_blocksize))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sysconf exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_dae32.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dae32.dir\Debug\\" /Fd"cmTC_dae32.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_dae32.vcxproj]
+
+File C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysconf
+  return ((int*)(&sysconf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file alloca.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_c3e75.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c3e75.dir\Debug\\" /Fd"cmTC_c3e75.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'alloca.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_c3e75.vcxproj]
+
+
+Determining if the include file sys/param.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_0295f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0295f.dir\Debug\\" /Fd"cmTC_0295f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'sys/param.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0295f.vcxproj]
+
+
+Determining if the include file sys/resource.h exists failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_3cf6d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3cf6d.dir\Debug\\" /Fd"cmTC_3cf6d.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_3cf6d.vcxproj]
+
+
+Determining size of longlong failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_6d0f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6d0f8.dir\Debug\\" /Fd"cmTC_6d0f8.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c"
+  HAVE_LONGLONG.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c(25): error C2065: 'longlong': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6d0f8.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c(26): error C2065: 'longlong': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6d0f8.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c(27): error C2065: 'longlong': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6d0f8.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c(28): error C2065: 'longlong': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6d0f8.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_LONGLONG.c(29): error C2065: 'longlong': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_6d0f8.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_LONGLONG.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(longlong))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of ssize_t failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_83e06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83e06.dir\Debug\\" /Fd"cmTC_83e06.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c"
+  HAVE_SSIZE_T.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c(25): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_83e06.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c(26): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_83e06.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c(27): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_83e06.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c(28): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_83e06.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SSIZE_T.c(29): error C2065: 'ssize_t': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_83e06.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uchar failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ac955.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ac955.dir\Debug\\" /Fd"cmTC_ac955.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c"
+  HAVE_UCHAR.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c(25): error C2065: 'uchar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ac955.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c(26): error C2065: 'uchar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ac955.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c(27): error C2065: 'uchar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ac955.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c(28): error C2065: 'uchar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ac955.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UCHAR.c(29): error C2065: 'uchar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ac955.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_UCHAR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(uchar))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_64b40.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_64b40.dir\Debug\\" /Fd"cmTC_64b40.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c"
+  HAVE_UINT.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c(25): error C2065: 'uint': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_64b40.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c(26): error C2065: 'uint': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_64b40.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c(27): error C2065: 'uint': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_64b40.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c(28): error C2065: 'uint': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_64b40.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_UINT.c(29): error C2065: 'uint': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_64b40.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_UINT.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(uint))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of schar failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_24c56.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24c56.dir\Debug\\" /Fd"cmTC_24c56.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c"
+  HAVE_SCHAR.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c(25): error C2065: 'schar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_24c56.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c(26): error C2065: 'schar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_24c56.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c(27): error C2065: 'schar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_24c56.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c(28): error C2065: 'schar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_24c56.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_SCHAR.c(29): error C2065: 'schar': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_24c56.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_SCHAR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(schar))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of ushort failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_ae714.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ae714.dir\Debug\\" /Fd"cmTC_ae714.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c"
+  HAVE_USHORT.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c(25): error C2065: 'ushort': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ae714.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c(26): error C2065: 'ushort': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ae714.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c(27): error C2065: 'ushort': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ae714.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c(28): error C2065: 'ushort': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ae714.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckTypeSize\HAVE_USHORT.c(29): error C2065: 'ushort': undeclared identifier [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_ae714.vcxproj]
+
+C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CheckTypeSize/HAVE_USHORT.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ushort))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function shl_load exists in the dld; failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_0447b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=shl_load /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0447b.dir\Debug\\" /Fd"cmTC_0447b.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+LINK : fatal error LNK1104: cannot open file 'dld.lib' [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_0447b.vcxproj]
+
+
+Determining if the function dlopen exists in the  failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_11d5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=dlopen /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_11d5a.dir\Debug\\" /Fd"cmTC_11d5a.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol dlopen referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_11d5a.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\Debug\cmTC_11d5a.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_11d5a.vcxproj]
+
+
+Determining if files sys/types.h;fcntl.h;malloc.h;inttypes.h;limits.h;stdint.h;stdio.h;stdlib.h;string.h;sys/stat.h;time.h;signal.h;errno.h;ansidecl.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_993a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D _GNU_SOURCE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_993a4.dir\Debug\\" /Fd"cmTC_993a4.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_ANSIDECL_H.c"
+  HAVE_ANSIDECL_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_ANSIDECL_H.c(15): fatal error C1083: Cannot open include file: 'ansidecl.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_993a4.vcxproj]
+
+Source:
+/* */
+#include <sys/types.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <signal.h>
+#include <errno.h>
+#include <ansidecl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;fcntl.h;malloc.h;inttypes.h;limits.h;stdint.h;stdio.h;stdlib.h;string.h;sys/stat.h;time.h;signal.h;errno.h;ctype.h;dl.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_c477e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D _GNU_SOURCE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c477e.dir\Debug\\" /Fd"cmTC_c477e.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_DL_H.c"
+  HAVE_DL_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_DL_H.c(16): fatal error C1083: Cannot open include file: 'dl.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_c477e.vcxproj]
+
+Source:
+/* */
+#include <sys/types.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <signal.h>
+#include <errno.h>
+#include <ctype.h>
+#include <dl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;fcntl.h;malloc.h;inttypes.h;limits.h;stdint.h;stdio.h;stdlib.h;string.h;sys/stat.h;time.h;signal.h;errno.h;ctype.h;float.h;math.h;pthread.h exist failed with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_09ebe.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D _GNU_SOURCE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_09ebe.dir\Debug\\" /Fd"cmTC_09ebe.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_PTHREAD_H.c"
+  HAVE_PTHREAD_H.c
+  
+C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CheckIncludeFiles\HAVE_PTHREAD_H.c(18): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\Development\op3d_active\VTK-9.0.1\msvc\CMakeFiles\CMakeTmp\cmTC_09ebe.vcxproj]
+
+Source:
+/* */
+#include <sys/types.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <signal.h>
+#include <errno.h>
+#include <ctype.h>
+#include <float.h>
+#include <math.h>
+#include <pthread.h>
+
+
+int main(void){return 0;}
+
+Checking for __va_copy failed to compile with the following output:
+Change Dir: C:/Development/op3d_active/VTK-9.0.1/msvc/ThirdParty/libxml2/vtklibxml2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_46589.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m 
+Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27038 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D TEST_HAVE___VA_COPY /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_46589.dir\Debug\\" /Fd"cmTC_46589.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue  /bigobj "C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\platformTestsC.c"
+  platformTestsC.c
+  
+C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\platformTestsC.c(46): warning C4013: '__va_copy' undefined; assuming extern returning int [C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\CMakeFiles\CMakeTmp\cmTC_46589.vcxproj]
+platformTestsC.obj : error LNK2019: unresolved external symbol __va_copy referenced in function main [C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\CMakeFiles\CMakeTmp\cmTC_46589.vcxproj]
+C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\CMakeFiles\CMakeTmp\Debug\cmTC_46589.exe : fatal error LNK1120: 1 unresolved externals [C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\CMakeFiles\CMakeTmp\cmTC_46589.vcxproj]
+
+

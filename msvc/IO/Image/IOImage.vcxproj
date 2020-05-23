@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E310ADF-1E6C-381B-BC6C-50C9D996EABE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>IOImage</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkIOImage-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkIOImage-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkIOImage-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkIOImage-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOImage_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkImagingCore-9.0d.lib;vtkDICOMParser-9.0d.lib;vtkjpeg-9.0d.lib;vtkmetaio-9.0d.lib;vtkpng-9.0d.lib;vtktiff-9.0d.lib;vtkzlib-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkpugixml-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOImage-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOImage_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkImagingCore-9.0d.lib;vtkDICOMParser-9.0d.lib;vtkjpeg-9.0d.lib;vtkmetaio-9.0d.lib;vtkpng-9.0d.lib;vtktiff-9.0d.lib;vtkzlib-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkpugixml-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOImage-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOImage_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkImagingCore-9.0.lib;vtkDICOMParser-9.0.lib;vtkjpeg-9.0.lib;vtkmetaio-9.0.lib;vtkpng-9.0.lib;vtktiff-9.0.lib;vtkzlib-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkpugixml-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOImage-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\Utilities\DICOMParser;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO\vtkmetaio;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png\vtkpng;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\Utilities\MetaIO;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\png;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOImage_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Image;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Utilities\DICOMParser;..\..\..\Utilities\DICOMParser;..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\Utilities\MetaIO\vtkmetaio;..\..\..\Utilities\MetaIO\vtkmetaio;..\..\ThirdParty\png\vtkpng;..\..\..\ThirdParty\png\vtkpng;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jpeg;..\..\..\ThirdParty\jpeg;..\..\Utilities\MetaIO;..\..\..\Utilities\MetaIO;..\..\ThirdParty\png;..\..\..\ThirdParty\png;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;..\..\ThirdParty\tiff;..\..\..\ThirdParty\tiff;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkImagingCore-9.0.lib;vtkDICOMParser-9.0.lib;vtkjpeg-9.0.lib;vtkmetaio-9.0.lib;vtkpng-9.0.lib;vtktiff-9.0.lib;vtkzlib-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkpugixml-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOImage-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\IO\Image\vtkBMPReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkBMPWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkDEMReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkDICOMImageReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkGESignaReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkHDRReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageExport.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageImport.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageImportExecutive.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageReader2.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageReader2Collection.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageReader2Factory.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkImageWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkJPEGReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkJPEGWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkJSONImageWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkMedicalImageProperties.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkMedicalImageReader2.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkMetaImageReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkMetaImageWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkMRCReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkNIFTIImageHeader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkNIFTIImageReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkNIFTIImageWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkNrrdReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkOMETIFFReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkPNGReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkPNGWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkPNMReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkPNMWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkPostScriptWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkSEPReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkSLCReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkTIFFReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkTIFFWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkVolume16Reader.cxx" />
+    <ClCompile Include="..\..\..\IO\Image\vtkVolumeReader.cxx" />
+    <ClInclude Include="..\..\..\IO\Image\vtkBMPReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkBMPWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkDEMReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkDICOMImageReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkGESignaReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkHDRReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageExport.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageImport.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageImportExecutive.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageReader2.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageReader2Collection.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageReader2Factory.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkImageWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkJPEGReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkJPEGWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkJSONImageWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkMedicalImageProperties.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkMedicalImageReader2.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkMetaImageReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkMetaImageWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkMRCReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkNIFTIImageHeader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkNIFTIImageReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkNIFTIImageWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkNrrdReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkOMETIFFReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkPNGReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkPNGWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkPNMReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkPNMWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkPostScriptWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkSEPReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkSLCReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkTIFFReader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkTIFFWriter.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkVolume16Reader.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkVolumeReader.h" />
+    <ClInclude Include=".\vtkIOImageModule.h" />
+    <ClInclude Include="..\..\..\IO\Image\vtkTIFFReaderInternal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\CommonExecutionModel.vcxproj">
+      <Project>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</Project>
+      <Name>CommonExecutionModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\System\CommonSystem.vcxproj">
+      <Project>{80353F57-B7C1-3D16-BA1E-07C35F3E06CC}</Project>
+      <Name>CommonSystem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\DICOMParser\DICOMParser.vcxproj">
+      <Project>{764ED486-17BD-33CC-B3D5-5A8646F9048E}</Project>
+      <Name>DICOMParser</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Imaging\Core\ImagingCore.vcxproj">
+      <Project>{2959317B-56BB-3106-99AD-376557B5314D}</Project>
+      <Name>ImagingCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\jpeg\vtkjpeg\jpeg.vcxproj">
+      <Project>{520332E3-523B-3AF7-9BAA-F69E1492E2D0}</Project>
+      <Name>jpeg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\MetaIO\vtkmetaio\metaio.vcxproj">
+      <Project>{C62CCAD7-F1F9-3226-A343-CB25C5539C9F}</Project>
+      <Name>metaio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\png\vtkpng\png.vcxproj">
+      <Project>{B66299AF-870F-3585-9F7C-5CC5C44DAEC6}</Project>
+      <Name>png</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\pugixml\vtkpugixml\pugixml.vcxproj">
+      <Project>{E71D7E3D-AF6D-30E5-9945-29883C7E0558}</Project>
+      <Name>pugixml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\tiff\vtktiff\libtiff\tiff.vcxproj">
+      <Project>{620A61A5-59D6-3503-8C8B-CC16239B77BC}</Project>
+      <Name>tiff</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\zlib\vtkzlib\zlib.vcxproj">
+      <Project>{7D781F33-03CA-385D-97CC-8116E610A9BB}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

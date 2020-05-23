@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C6DDDBE7-F172-3D15-A439-D14B064898F7}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>exodusII</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkexodusII-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkexodusII-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkexodusII-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkexodusII-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Debug\";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;%(Include)</Include>
+      <Defines>_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";exodusII_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtknetcdf-9.0d.lib;vtkhdf5-9.0d.lib;vtkhdf5_hl-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkexodusII-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Debug\";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;%(Include)</Include>
+      <Defines>_WINDOWS;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";exodusII_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtknetcdf-9.0d.lib;vtkhdf5-9.0d.lib;vtkhdf5_hl-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkexodusII-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Release\";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";exodusII_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtknetcdf-9.0.lib;vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkexodusII-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Release\";exodusII_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII\vtkexodusII\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\exodusII;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;exoIIc_EXPORTS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";exodusII_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\exodusII\vtkexodusII;..\..\..\..\ThirdParty\exodusII\vtkexodusII\include;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\..\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\;..\..\..\..\ThirdParty\exodusII;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;..\..\netcdf;..\..\..\..\ThirdParty\netcdf;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtknetcdf-9.0.lib;vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkexodusII-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_concat_node_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_concat_side_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_attr_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_blk_ids.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_block.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_elem_var_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_glob_var_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_glob_vars.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_elem_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_node_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_side_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_n_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_nodal_var_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_set_ids.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_node_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_nset_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_nset_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_one_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_elem_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_elem_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_node_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_partial_side_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_side_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_side_set_ids.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_side_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_sset_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_sset_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_var_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_var_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_var_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_get_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_concat_node_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_concat_side_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_concat_var_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_attr_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_block.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_var_slab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_elem_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_glob_vars.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_node_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_side_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_n_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_nodal_var_slab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_node_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_node_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_node_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_nset_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_nset_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_one_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_elem_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_elem_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_elem_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_elem_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_node_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_node_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_node_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_partial_side_set_df.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_side_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_side_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_side_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_sset_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_sset_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_var_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_var_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_var_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\deprecated\ex_put_var_tab.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex__put_homogenous_block_params.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_add_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_close.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_conv.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_copy.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_create.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_create_group.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_create_par.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_cvt_nodes_to_sides.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_err.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_all_times.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_assemblies.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_assembly.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_attr_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_attr_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_attribute.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_blob.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_blobs.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_block.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_block_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_block_params.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_cmap_params.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_concat_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_concat_side_set_node_count.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_coord_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_coordinate_frames.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_eb_info_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_elem_cmap.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_elem_type.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_entity_count_per_polyhedra.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_glob_var_time_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_glob_vars_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_group_id.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_group_ids.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_id_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_ids.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_info.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_init.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_init_ext.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_init_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_init_info.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_loadbal_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_map_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_nodal_var_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_nodal_var_time_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_node_cmap.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_ns_param_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_object_truth_vector.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_coord_component.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_id_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_nodal_var_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_partial_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_processor_elem_maps.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_processor_node_maps.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_prop.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_prop_array.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_prop_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_qa.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_reduction_variable_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_reduction_variable_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_reduction_vars.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_side_set_node_count.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_side_set_node_list.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_side_set_node_list_len.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_ss_param_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_truth_table.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_var_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_variable_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_variable_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_get_variable_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_inquire.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_int_get_block_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_ne_util.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_open.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_open_par.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_opts.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_all_var_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_all_var_param_ext.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_assemblies.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_attr_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_attr_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_attribute.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_blobs.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_block.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_block_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_block_params.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_cmap_params.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_cmap_params_cc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_concat_all_blocks.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_concat_elem_block.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_concat_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_coord_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_coordinate_frames.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_eb_info_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_elem_cmap.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_entity_count_per_polyhedra.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_id_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_info.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_init.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_init_ext.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_init_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_init_info.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_loadbal_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_loadbal_param_cc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_map_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_nodal_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_nodal_var_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_node_cmap.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_ns_param_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_conn.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_coord.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_coord_component.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_id_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_nodal_var_int.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_num_map.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_one_attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_partial_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_processor_elem_maps.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_processor_node_maps.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_prop.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_prop_array.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_prop_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_qa.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_reduction_variable_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_reduction_variable_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_reduction_vars.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_set.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_set_dist_fact.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_set_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_sets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_ss_param_global.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_time.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_truth_table.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_variable_name.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_variable_names.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_put_variable_param.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_threadsafe.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_update.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\src\ex_utils.c" />
+    <ClInclude Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\include\exodusII.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\include\exodusII_int.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\exodusII\vtkexodusII\include\vtk_exodusII_mangle.h" />
+    <ClInclude Include=".\include\exodusII_cfg.h" />
+    <ClInclude Include=".\include\exodus_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\netcdf\vtknetcdf\netcdf.vcxproj">
+      <Project>{0DD13A9B-98CC-3F0A-9550-05BD84380238}</Project>
+      <Name>netcdf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\hdf5\vtkhdf5\hl\src\vtkhdf5_hl_src.vcxproj">
+      <Project>{988191A1-6331-3CCD-8332-D9BF1D1B2234}</Project>
+      <Name>vtkhdf5_hl_src</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\hdf5\vtkhdf5\src\vtkhdf5_src.vcxproj">
+      <Project>{2F71E264-6682-3CF6-A9FE-A082B8A928ED}</Project>
+      <Name>vtkhdf5_src</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

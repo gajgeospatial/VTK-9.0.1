@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D6929A1F-8254-391A-BC01-E14DB9D35386}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkIOExportGL2PS-hierarchy</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Debug.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Debug.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Release.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.Release.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.MinSizeRel.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.MinSizeRel.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating the wrap hierarchy for VTK::IOExportGL2PS</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.RelWithDebInfo.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt .\CMakeFiles\vtkIOExportGL2PS-hierarchy.data @.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExportGL2PS-hierarchy.txt.rule;..\..\..\IO\ExportGL2PS\vtkGL2PSExporter.h;..\..\..\IO\ExportGL2PS\vtkOpenGLGL2PSExporter.h;.\vtkIOExportGL2PSModule.h;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.RelWithDebInfo.args;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.data;.\CMakeFiles\vtkIOExportGL2PS-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\3068fb367ba06ac4d07f425ea91448ad\vtkIOExportGL2PS-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOExportGL2PS-hierarchy.txt;..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.\CMakeFiles\vtkIOExportGL2PS-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkIOExportGL2PS-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrapping\Tools\WrapHierarchy.vcxproj">
+      <Project>{4ADB90CE-A44B-3A81-A94A-6CB421A7FA3D}</Project>
+      <Name>WrapHierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Export\vtkIOExport-hierarchy.vcxproj">
+      <Project>{B55DB448-2DD0-331D-97F9-72360EFB96B9}</Project>
+      <Name>vtkIOExport-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2-hierarchy.vcxproj">
+      <Project>{F62EFE8C-2DA3-3ADB-B92B-E09D64164451}</Project>
+      <Name>vtkRenderingGL2PSOpenGL2-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

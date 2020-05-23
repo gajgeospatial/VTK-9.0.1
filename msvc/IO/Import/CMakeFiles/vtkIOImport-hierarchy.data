@@ -1,0 +1,8 @@
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtk3DS.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtk3DSImporter.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtkGLTFImporter.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtkImporter.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtkVRMLImporter.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtkOBJImporter.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/IO/Import/vtkOBJImporterInternals.h;vtkIOImport
+C:/Development/op3d_active/VTK-9.0.1/msvc/IO/Import/vtkIOImportModule.h;vtkIOImport

@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{71A42C46-D9B9-36B8-991F-5B14EC49C077}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>IOParallel</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkIOParallel-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkIOParallel-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkIOParallel-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkIOParallel-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Core;C:\Development\op3d_active\VTK-9.0.1\IO\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOParallel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkIOGeometry-9.0d.lib;vtkIOImage-9.0d.lib;vtkjsoncpp-9.0d.lib;vtkFiltersParallel-9.0d.lib;vtkFiltersExtraction-9.0d.lib;vtkParallelCore-9.0d.lib;vtkIOLegacy-9.0d.lib;vtkIOCore-9.0d.lib;vtkFiltersHybrid-9.0d.lib;vtkFiltersGeometry-9.0d.lib;vtkImagingCore-9.0d.lib;vtkFiltersModeling-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkFiltersTexture-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOParallel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Core;C:\Development\op3d_active\VTK-9.0.1\IO\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";IOParallel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkIOGeometry-9.0d.lib;vtkIOImage-9.0d.lib;vtkjsoncpp-9.0d.lib;vtkFiltersParallel-9.0d.lib;vtkFiltersExtraction-9.0d.lib;vtkParallelCore-9.0d.lib;vtkIOLegacy-9.0d.lib;vtkIOCore-9.0d.lib;vtkFiltersHybrid-9.0d.lib;vtkFiltersGeometry-9.0d.lib;vtkImagingCore-9.0d.lib;vtkFiltersModeling-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkFiltersTexture-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOParallel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Core;C:\Development\op3d_active\VTK-9.0.1\IO\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOParallel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkIOGeometry-9.0.lib;vtkIOImage-9.0.lib;vtkjsoncpp-9.0.lib;vtkFiltersParallel-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkParallelCore-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOCore-9.0.lib;vtkFiltersHybrid-9.0.lib;vtkFiltersGeometry-9.0.lib;vtkImagingCore-9.0.lib;vtkFiltersModeling-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersTexture-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOParallel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";IOParallel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\IO\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Core;C:\Development\op3d_active\VTK-9.0.1\IO\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\IO\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\IO\Legacy;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\Filters\Parallel;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\Filters\Geometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Filters\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\Filters\Texture;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";IOParallel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\IO\Parallel;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\IO\Core;..\Geometry;..\..\..\IO\Geometry;..\Legacy;..\..\..\IO\Legacy;..\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Filters\Extraction;..\..\..\Filters\Extraction;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Parallel;..\..\..\Filters\Parallel;..\..\Filters\Geometry;..\..\..\Filters\Geometry;..\..\Filters\Hybrid;..\..\..\Filters\Hybrid;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Filters\Texture;..\..\..\Filters\Texture;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkIOGeometry-9.0.lib;vtkIOImage-9.0.lib;vtkjsoncpp-9.0.lib;vtkFiltersParallel-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkParallelCore-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOCore-9.0.lib;vtkFiltersHybrid-9.0.lib;vtkFiltersGeometry-9.0.lib;vtkImagingCore-9.0.lib;vtkFiltersModeling-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersTexture-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkIOParallel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\IO\Parallel\vtkMultiBlockPLOT3DReaderInternals.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkEnSightWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkMultiBlockPLOT3DReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPlot3DMetaReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPChacoReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPDataSetReader.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPDataSetWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPImageWriter.cxx" />
+    <ClCompile Include="..\..\..\IO\Parallel\vtkPOpenFOAMReader.cxx" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkEnSightWriter.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkMultiBlockPLOT3DReader.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPlot3DMetaReader.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPChacoReader.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPDataSetReader.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPDataSetWriter.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPImageWriter.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkPOpenFOAMReader.h" />
+    <ClInclude Include=".\vtkIOParallelModule.h" />
+    <ClInclude Include="..\..\..\IO\Parallel\vtkMultiBlockPLOT3DReaderInternals.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\CommonExecutionModel.vcxproj">
+      <Project>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</Project>
+      <Name>CommonExecutionModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\System\CommonSystem.vcxproj">
+      <Project>{80353F57-B7C1-3D16-BA1E-07C35F3E06CC}</Project>
+      <Name>CommonSystem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Core\FiltersCore.vcxproj">
+      <Project>{F5457D26-283A-32B2-B438-A168C352576E}</Project>
+      <Name>FiltersCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Extraction\FiltersExtraction.vcxproj">
+      <Project>{386AA377-6958-3C23-8A43-4D3F95047BDA}</Project>
+      <Name>FiltersExtraction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\General\FiltersGeneral.vcxproj">
+      <Project>{B6AC9500-4E85-3C11-82A1-1ED20D0FBB86}</Project>
+      <Name>FiltersGeneral</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Geometry\FiltersGeometry.vcxproj">
+      <Project>{0206723A-0B97-3BEA-B7BC-B513801794A3}</Project>
+      <Name>FiltersGeometry</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Hybrid\FiltersHybrid.vcxproj">
+      <Project>{3735830B-062C-3AD8-B7EF-00AC2E85E4F1}</Project>
+      <Name>FiltersHybrid</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Modeling\FiltersModeling.vcxproj">
+      <Project>{2B3B2E1A-C911-3F23-90CD-E82DBFE85FC8}</Project>
+      <Name>FiltersModeling</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Parallel\FiltersParallel.vcxproj">
+      <Project>{D8A5C7A0-D685-3988-9BF5-B4DBAA03E03A}</Project>
+      <Name>FiltersParallel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Sources\FiltersSources.vcxproj">
+      <Project>{9E32B9B0-6E72-310D-8ED3-A6D0FA0900B0}</Project>
+      <Name>FiltersSources</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Texture\FiltersTexture.vcxproj">
+      <Project>{9DF0C0EA-55BD-350F-996E-EDDCACEEC904}</Project>
+      <Name>FiltersTexture</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\IOCore.vcxproj">
+      <Project>{4823DB65-D3F4-3734-8B5D-BD5DBA41BE0A}</Project>
+      <Name>IOCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Geometry\IOGeometry.vcxproj">
+      <Project>{3A8DAA5E-9756-377A-8C28-E258C2D4ED96}</Project>
+      <Name>IOGeometry</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Image\IOImage.vcxproj">
+      <Project>{8E310ADF-1E6C-381B-BC6C-50C9D996EABE}</Project>
+      <Name>IOImage</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Legacy\IOLegacy.vcxproj">
+      <Project>{77C1CFE2-AC41-385B-A2D1-DE770E45900E}</Project>
+      <Name>IOLegacy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Imaging\Core\ImagingCore.vcxproj">
+      <Project>{2959317B-56BB-3106-99AD-376557B5314D}</Project>
+      <Name>ImagingCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Parallel\Core\ParallelCore.vcxproj">
+      <Project>{59A1E35C-3074-3403-A425-43E5A2662EAA}</Project>
+      <Name>ParallelCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\jsoncpp\vtkjsoncpp\jsoncpp.vcxproj">
+      <Project>{2151C7D1-EFB5-342F-93E0-0C7961742DEE}</Project>
+      <Name>jsoncpp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

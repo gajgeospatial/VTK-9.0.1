@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersStatistics-hierarchy.txt.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\89d952fbf0807da564697dc06c730835\vtkFiltersStatistics-hierarchy.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkFiltersStatistics-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2DCA383-6A99-3E48-8329-8DD9D78A0C27}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkIOLegacy-hierarchy</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.Debug.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.Debug.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.Release.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.Release.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.MinSizeRel.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.MinSizeRel.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating the wrap hierarchy for VTK::IOLegacy</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkIOLegacy-hierarchy.RelWithDebInfo.args -o ..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt .\CMakeFiles\vtkIOLegacy-hierarchy.data @.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOLegacy-hierarchy.txt.rule;..\..\..\IO\Legacy\vtkCompositeDataReader.h;..\..\..\IO\Legacy\vtkCompositeDataWriter.h;..\..\..\IO\Legacy\vtkDataObjectReader.h;..\..\..\IO\Legacy\vtkDataObjectWriter.h;..\..\..\IO\Legacy\vtkDataReader.h;..\..\..\IO\Legacy\vtkDataSetReader.h;..\..\..\IO\Legacy\vtkDataSetWriter.h;..\..\..\IO\Legacy\vtkDataWriter.h;..\..\..\IO\Legacy\vtkGenericDataObjectReader.h;..\..\..\IO\Legacy\vtkGenericDataObjectWriter.h;..\..\..\IO\Legacy\vtkGraphReader.h;..\..\..\IO\Legacy\vtkGraphWriter.h;..\..\..\IO\Legacy\vtkPixelExtentIO.h;..\..\..\IO\Legacy\vtkPolyDataReader.h;..\..\..\IO\Legacy\vtkPolyDataWriter.h;..\..\..\IO\Legacy\vtkRectilinearGridReader.h;..\..\..\IO\Legacy\vtkRectilinearGridWriter.h;..\..\..\IO\Legacy\vtkSimplePointsReader.h;..\..\..\IO\Legacy\vtkSimplePointsWriter.h;..\..\..\IO\Legacy\vtkStructuredGridReader.h;..\..\..\IO\Legacy\vtkStructuredGridWriter.h;..\..\..\IO\Legacy\vtkStructuredPointsReader.h;..\..\..\IO\Legacy\vtkStructuredPointsWriter.h;..\..\..\IO\Legacy\vtkTableReader.h;..\..\..\IO\Legacy\vtkTableWriter.h;..\..\..\IO\Legacy\vtkTreeReader.h;..\..\..\IO\Legacy\vtkTreeWriter.h;..\..\..\IO\Legacy\vtkUnstructuredGridReader.h;..\..\..\IO\Legacy\vtkUnstructuredGridWriter.h;.\vtkIOLegacyModule.h;.\CMakeFiles\vtkIOLegacy-hierarchy.RelWithDebInfo.args;.\CMakeFiles\vtkIOLegacy-hierarchy.data;.\CMakeFiles\vtkIOLegacy-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\10e769d9cb9ea4531570a395999b381f\vtkIOLegacy-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkIOLegacy-hierarchy.txt;..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.\CMakeFiles\vtkIOLegacy-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkIOLegacy-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrapping\Tools\WrapHierarchy.vcxproj">
+      <Project>{4ADB90CE-A44B-3A81-A94A-6CB421A7FA3D}</Project>
+      <Name>WrapHierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\vtkCommonCore-hierarchy.vcxproj">
+      <Project>{D546C63D-5203-3818-948E-C9FEE2851946}</Project>
+      <Name>vtkCommonCore-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\vtkCommonDataModel-hierarchy.vcxproj">
+      <Project>{59F4C793-7720-34CA-B1F7-4C80860B8518}</Project>
+      <Name>vtkCommonDataModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\vtkCommonExecutionModel-hierarchy.vcxproj">
+      <Project>{B546BE43-BA7B-3236-995C-DA7CB96E54AC}</Project>
+      <Name>vtkCommonExecutionModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\vtkIOCore-hierarchy.vcxproj">
+      <Project>{0FBCAF8B-8918-357D-BF22-857671846166}</Project>
+      <Name>vtkIOCore-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

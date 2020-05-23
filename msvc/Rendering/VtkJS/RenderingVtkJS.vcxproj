@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{23ACF8C4-FCB8-3B2E-A77B-C0A9C6D8A76C}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>RenderingVtkJS</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkRenderingVtkJS-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkRenderingVtkJS-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkRenderingVtkJS-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkRenderingVtkJS-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";RenderingVtkJS_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkRenderingSceneGraph-9.0d.lib;vtkjsoncpp-9.0d.lib;vtkRenderingOpenGL2-9.0d.lib;vtkRenderingUI-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkglew-9.0d.lib;opengl32.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkRenderingVtkJS-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";RenderingVtkJS_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkRenderingSceneGraph-9.0d.lib;vtkjsoncpp-9.0d.lib;vtkRenderingOpenGL2-9.0d.lib;vtkRenderingUI-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkglew-9.0d.lib;opengl32.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkRenderingVtkJS-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";RenderingVtkJS_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkRenderingSceneGraph-9.0.lib;vtkjsoncpp-9.0.lib;vtkRenderingOpenGL2-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkglew-9.0.lib;opengl32.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkRenderingVtkJS-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";RenderingVtkJS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\Rendering\VtkJS;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\Rendering\SceneGraph;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp\vtkjsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp\vtkjsoncpp\json;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\Rendering\OpenGL2;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\Rendering\UI;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew\vtkglew;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jsoncpp;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\glew;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\glew;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=1;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";RenderingVtkJS_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Rendering\VtkJS;..\..\Common\Core;..\..\..\Common\Core;..\SceneGraph;..\..\..\Rendering\SceneGraph;..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\..\ThirdParty\jsoncpp\vtkjsoncpp;..\..\ThirdParty\jsoncpp\vtkjsoncpp\json;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Rendering\Core;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\OpenGL2;..\..\..\Rendering\OpenGL2;..\UI;..\..\..\Rendering\UI;..\..\ThirdParty\glew\vtkglew;..\..\..\ThirdParty\glew\vtkglew;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\jsoncpp;..\..\..\ThirdParty\jsoncpp;..\..\ThirdParty\glew;..\..\..\ThirdParty\glew;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkRenderingSceneGraph-9.0.lib;vtkjsoncpp-9.0.lib;vtkRenderingOpenGL2-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkglew-9.0.lib;opengl32.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkRenderingVtkJS-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Rendering\VtkJS\vtkVtkJSSceneGraphSerializer.cxx" />
+    <ClCompile Include="..\..\..\Rendering\VtkJS\vtkVtkJSViewNodeFactory.cxx" />
+    <ClInclude Include="..\..\..\Rendering\VtkJS\vtkVtkJSSceneGraphSerializer.h" />
+    <ClInclude Include="..\..\..\Rendering\VtkJS\vtkVtkJSViewNodeFactory.h" />
+    <ClInclude Include=".\vtkRenderingVtkJSModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\CommonExecutionModel.vcxproj">
+      <Project>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</Project>
+      <Name>CommonExecutionModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Core\FiltersCore.vcxproj">
+      <Project>{F5457D26-283A-32B2-B438-A168C352576E}</Project>
+      <Name>FiltersCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\RenderingCore.vcxproj">
+      <Project>{7A631ED5-E2CF-3FB6-805D-867AE7D2ADC4}</Project>
+      <Name>RenderingCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenGL2\RenderingOpenGL2.vcxproj">
+      <Project>{BBCFC440-F17A-3830-96FB-6F132996E62B}</Project>
+      <Name>RenderingOpenGL2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\SceneGraph\RenderingSceneGraph.vcxproj">
+      <Project>{C97ABD9B-13D7-37A3-AF82-9314F70897E6}</Project>
+      <Name>RenderingSceneGraph</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\UI\RenderingUI.vcxproj">
+      <Project>{AA3C80E6-5963-3A9F-A0A7-036F80BCDA1F}</Project>
+      <Name>RenderingUI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\glew\vtkglew\glew.vcxproj">
+      <Project>{4B38F15E-5D7D-3647-B4D6-725C4395B2C8}</Project>
+      <Name>glew</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\jsoncpp\vtkjsoncpp\jsoncpp.vcxproj">
+      <Project>{2151C7D1-EFB5-342F-93E0-0C7961742DEE}</Project>
+      <Name>jsoncpp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+C:/Development/op3d_active/VTK-9.0.1/ThirdParty/ogg/vtkogg/CMakeLists.txt
+C:/Development/op3d_active/VTK-9.0.1/ThirdParty/ogg/vtkogg/cmake/CheckSizes.cmake
+C:/Development/op3d_active/VTK-9.0.1/ThirdParty/ogg/vtkogg/include/ogg/config_types.h.in
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/GenerateExportHeader.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/exportheader.cmake.in

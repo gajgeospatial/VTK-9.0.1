@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>CommonExecutionModel</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonExecutionModel-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkCommonExecutionModel-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonExecutionModel-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkCommonExecutionModel-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonExecutionModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonExecutionModel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonExecutionModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonDataModel-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonExecutionModel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonExecutionModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonExecutionModel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";CommonExecutionModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonExecutionModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\ExecutionModel;..\Core;..\..\..\Common\Core;..\DataModel;..\..\..\Common\DataModel;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonDataModel-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonExecutionModel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkAlgorithmOutput.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkAnnotationLayersAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkArrayDataAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkCachedStreamingDemandDrivenPipeline.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkCastToConcrete.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkCompositeDataPipeline.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkCompositeDataSetAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkDataObjectAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkDataSetAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkDemandDrivenPipeline.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkDirectedGraphAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkEnsembleSource.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkExecutive.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkExplicitStructuredGridAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkExtentRCBPartitioner.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkExtentSplitter.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkExtentTranslator.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkFilteringInformationKeyManager.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkGraphAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkHierarchicalBoxDataSetAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkHyperTreeGridAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkImageAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkImageInPlaceFilter.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkImageProgressIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkImageToStructuredGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkImageToStructuredPoints.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkInformationDataObjectMetaDataKey.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkInformationExecutivePortKey.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkInformationExecutivePortVectorKey.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkInformationIntegerRequestKey.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkMoleculeAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkMultiBlockDataSetAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkMultiTimeStepAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkParallelReader.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkPassInputTypeAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkPiecewiseFunctionAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkPiecewiseFunctionShiftScale.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkPointSetAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkPolyDataAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkProgressObserver.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkReaderAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkReaderExecutive.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkRectilinearGridAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSMPProgressObserver.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkScalarTree.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSelectionAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSimpleImageToImageFilter.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSimpleReader.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSimpleScalarTree.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSpanSpace.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkSphereTree.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkStreamingDemandDrivenPipeline.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkStructuredGridAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkTableAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkThreadedCompositeDataPipeline.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkThreadedImageAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkTreeAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkTrivialConsumer.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkTrivialProducer.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkUndirectedGraphAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkUniformGridPartitioner.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkUnstructuredGridAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkUnstructuredGridBaseAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkNonOverlappingAMRAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkOverlappingAMRAlgorithm.cxx" />
+    <ClCompile Include="..\..\..\Common\ExecutionModel\vtkUniformGridAMRAlgorithm.cxx" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkAlgorithmOutput.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkAnnotationLayersAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkArrayDataAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkCachedStreamingDemandDrivenPipeline.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkCastToConcrete.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkCompositeDataPipeline.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkCompositeDataSetAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkDataObjectAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkDataSetAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkDemandDrivenPipeline.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkDirectedGraphAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkEnsembleSource.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkExecutive.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkExplicitStructuredGridAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkExtentRCBPartitioner.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkExtentSplitter.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkExtentTranslator.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkFilteringInformationKeyManager.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkGraphAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkHierarchicalBoxDataSetAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkHyperTreeGridAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkImageAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkImageInPlaceFilter.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkImageProgressIterator.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkImageToStructuredGrid.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkImageToStructuredPoints.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkInformationDataObjectMetaDataKey.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkInformationExecutivePortKey.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkInformationExecutivePortVectorKey.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkInformationIntegerRequestKey.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkMoleculeAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkMultiBlockDataSetAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkMultiTimeStepAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkParallelReader.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkPassInputTypeAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkPiecewiseFunctionAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkPiecewiseFunctionShiftScale.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkPointSetAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkPolyDataAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkProgressObserver.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkReaderAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkReaderExecutive.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkRectilinearGridAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSMPProgressObserver.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkScalarTree.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSelectionAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSimpleImageToImageFilter.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSimpleReader.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSimpleScalarTree.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSpanSpace.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkSphereTree.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkStreamingDemandDrivenPipeline.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkStructuredGridAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkTableAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkThreadedCompositeDataPipeline.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkThreadedImageAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkTreeAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkTrivialConsumer.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkTrivialProducer.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkUndirectedGraphAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkUniformGridPartitioner.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkUnstructuredGridAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkUnstructuredGridBaseAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkNonOverlappingAMRAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkOverlappingAMRAlgorithm.h" />
+    <ClInclude Include="..\..\..\Common\ExecutionModel\vtkUniformGridAMRAlgorithm.h" />
+    <ClInclude Include=".\vtkCommonExecutionModelModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\System\CommonSystem.vcxproj">
+      <Project>{80353F57-B7C1-3D16-BA1E-07C35F3E06CC}</Project>
+      <Name>CommonSystem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B1B1FFE-7B9D-3DCA-A9EB-D00DD6A8C2FC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>libxml2</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtklibxml2-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtklibxml2-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtklibxml2-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtklibxml2-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";libxml2_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtklibxml2-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";libxml2_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtklibxml2-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";libxml2_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtklibxml2-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";libxml2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include\libxml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2\vtklibxml2\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\libxml2;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_GNU_SOURCE;_REENTRANT;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";libxml2_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\libxml2\vtklibxml2;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml;.\include\libxml;..\..\..\..\ThirdParty\libxml2\vtklibxml2\include;.\include;..\..\zlib\vtkzlib;..\..\..\..\ThirdParty\zlib\vtkzlib;..\;..\..\..\..\ThirdParty\libxml2;..\..\zlib;..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtklibxml2-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\DOCBparser.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\HTMLparser.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\HTMLtree.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\SAX.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\SAX2.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\buf.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\c14n.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\catalog.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\chvalid.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\debugXML.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\dict.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\encoding.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\entities.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\error.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\globals.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\hash.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\legacy.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\list.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\parser.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\parserInternals.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\pattern.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\relaxng.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\schematron.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\threads.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\tree.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\uri.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\valid.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xinclude.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xlink.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlIO.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlmemory.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlmodule.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlreader.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlregexp.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlsave.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlschemas.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlschemastypes.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlstring.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlunicode.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xmlwriter.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xpath.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\xpointer.c" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\c14n.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\catalog.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\chvalid.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\debugXML.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\dict.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\DOCBparser.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\encoding.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\entities.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\globals.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\hash.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\HTMLparser.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\HTMLtree.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\list.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\nanoftp.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\nanohttp.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\parser.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\parserInternals.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\pattern.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\relaxng.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\SAX.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\SAX2.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\schemasInternals.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\schematron.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\threads.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\tree.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\uri.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\valid.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\vtk_libxml2_mangle.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xinclude.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xlink.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlautomata.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlerror.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlexports.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlIO.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlmemory.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlmodule.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlreader.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlregexp.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlsave.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlschemas.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlschemastypes.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlstring.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlunicode.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlwin32version.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xmlwriter.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xpath.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xpathInternals.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\libxml2\vtklibxml2\include\libxml\xpointer.h" />
+    <ClInclude Include=".\include\libxml\xmlversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\zlib\vtkzlib\zlib.vcxproj">
+      <Project>{7D781F33-03CA-385D-97CC-8116E610A9BB}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Development/op3d_active/VTK-9.0.1/ThirdParty/theora/vtktheora/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/GenerateExportHeader.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/exportheader.cmake.in

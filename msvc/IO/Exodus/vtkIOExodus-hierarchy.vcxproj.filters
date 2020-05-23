@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkIOExodus-hierarchy.txt.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\61ad1a0919e7a3e76b88d050f150a61a\vtkIOExodus-hierarchy.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkIOExodus-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

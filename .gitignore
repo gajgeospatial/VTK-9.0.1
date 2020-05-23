@@ -1,21 +1,21 @@
-# Do not add ExternalData module staging files
-.ExternalData*
-
-# Exclude compiled Python objects.
-*.pyc
-*.pyo
-__pycache__/
-
-# Exclude OS X .DS_Store files.
-.DS_Store
-
-# Exclude some Xcode stuff.
-xcuserdata
-project.xcworkspace
-
-# Exclude VSCode settings and configuration folder
-*.vscode*
-
-# Exclude Visual Studio stuff
-.vs*
-CMakeSettings.json
+vc100
+vc110
+vc120
+vc140
+vc141
+.vs
+**/bin/*
+**/release/*
+**/debug/*
+**/*.dir
+**/*.sdf
+**/*.VC.db
+**/ipch*
+CDB_Builder.VC.VC.opendb
+*.suo
+*.suo
+msvc/src/osgPlugins/txp/osgdb_txp.vcxproj.user
+msvc/src/osgPlugins/cfg/osgdb_cfg.vcxproj.user
+msvc/src/osgPlugins/fbx/osgdb_fbx.vcxproj.user
+msvc_applications-examples/examples/osgviewerFLTK/example_osgviewerFLTK.vcxproj.user
+msvc/src/osgPlugins/dw/osgdb_dw.vcxproj.user

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersImaging-hierarchy.txt.rule" />
+    <CustomBuild Include="..\..\CMakeFiles\0fdcd0f7e0a29dabe35d3a946385db0f\vtkFiltersImaging-hierarchy.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkFiltersImaging-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

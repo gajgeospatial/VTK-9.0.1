@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5DCF7DCD-BFEA-3EA4-9FBD-2B48EB03EDC4}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>InfovisLayout</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkInfovisLayout-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkInfovisLayout-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkInfovisLayout-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkInfovisLayout-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Color;C:\Development\op3d_active\VTK-9.0.1\Common\Color;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";InfovisLayout_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersModeling-9.0d.lib;vtkImagingHybrid-9.0d.lib;vtkInfovisCore-9.0d.lib;vtkIOImage-9.0d.lib;vtkImagingSources-9.0d.lib;vtkRenderingFreeType-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkCommonColor-9.0d.lib;vtkfreetype-9.0d.lib;vtkImagingCore-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkCommonComputationalGeometry-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkInfovisLayout-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Color;C:\Development\op3d_active\VTK-9.0.1\Common\Color;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";InfovisLayout_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersModeling-9.0d.lib;vtkImagingHybrid-9.0d.lib;vtkInfovisCore-9.0d.lib;vtkIOImage-9.0d.lib;vtkImagingSources-9.0d.lib;vtkRenderingFreeType-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkCommonColor-9.0d.lib;vtkfreetype-9.0d.lib;vtkImagingCore-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkCommonComputationalGeometry-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkInfovisLayout-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Color;C:\Development\op3d_active\VTK-9.0.1\Common\Color;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";InfovisLayout_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersModeling-9.0.lib;vtkImagingHybrid-9.0.lib;vtkInfovisCore-9.0.lib;vtkIOImage-9.0.lib;vtkImagingSources-9.0.lib;vtkRenderingFreeType-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersSources-9.0.lib;vtkCommonColor-9.0.lib;vtkfreetype-9.0.lib;vtkImagingCore-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkCommonComputationalGeometry-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkInfovisLayout-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";InfovisLayout_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\Infovis\Layout;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\Common\ComputationalGeometry;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\Filters\Modeling;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\Filters\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\Imaging\Hybrid;C:\Development\op3d_active\VTK-9.0.1\msvc\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\Infovis\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Color;C:\Development\op3d_active\VTK-9.0.1\Common\Color;C:\Development\op3d_active\VTK-9.0.1\msvc\IO\Image;C:\Development\op3d_active\VTK-9.0.1\IO\Image;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\Imaging\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\Imaging\Sources;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\Rendering\FreeType;C:\Development\op3d_active\VTK-9.0.1\msvc\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\Rendering\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype\vtkfreetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\freetype;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_InfovisBoostGraphAlgorithms=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";InfovisLayout_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Infovis\Layout;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\ComputationalGeometry;..\..\..\Common\ComputationalGeometry;..\..\Common\System;..\..\..\Common\System;..\..\Filters\Core;..\..\..\Filters\Core;..\..\Common\Misc;..\..\..\Common\Misc;..\..\Filters\General;..\..\..\Filters\General;..\..\Filters\Modeling;..\..\..\Filters\Modeling;..\..\Filters\Sources;..\..\..\Filters\Sources;..\..\Imaging\Hybrid;..\..\..\Imaging\Hybrid;..\Core;..\..\..\Infovis\Core;..\..\Common\Color;..\..\..\Common\Color;..\..\IO\Image;..\..\..\IO\Image;..\..\Imaging\Core;..\..\..\Imaging\Core;..\..\Imaging\Sources;..\..\..\Imaging\Sources;..\..\Rendering\FreeType;..\..\..\Rendering\FreeType;..\..\Rendering\Core;..\..\..\Rendering\Core;..\..\ThirdParty\freetype\vtkfreetype;..\..\..\ThirdParty\freetype\vtkfreetype;..\..\ThirdParty\zlib\vtkzlib;..\..\..\ThirdParty\zlib\vtkzlib;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\freetype;..\..\..\ThirdParty\freetype;..\..\ThirdParty\zlib;..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersModeling-9.0.lib;vtkImagingHybrid-9.0.lib;vtkInfovisCore-9.0.lib;vtkIOImage-9.0.lib;vtkImagingSources-9.0.lib;vtkRenderingFreeType-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersSources-9.0.lib;vtkCommonColor-9.0.lib;vtkfreetype-9.0.lib;vtkImagingCore-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkCommonComputationalGeometry-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkInfovisLayout-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkArcParallelEdgeStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkAreaLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkAreaLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkAssignCoordinates.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkAssignCoordinatesLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkAttributeClustering2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkBoxLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCirclePackFrontChainLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCirclePackLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCirclePackLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCirclePackToPolyData.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCircularLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkClustering2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCommunity2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkConeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkConstrained2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkCosmicTreeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkEdgeLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkEdgeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkFast2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkForceDirectedLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkGeoEdgeStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkGeoMath.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkGraphLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkGraphLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkIncrementalForceLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkKCoreLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkPassThroughEdgeStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkPassThroughLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkPerturbCoincidentVertices.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkRandomLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSimple2DLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSimple3DCirclesStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSliceAndDiceLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSpanTreeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSplineGraphEdges.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkSquarifyLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkStackedTreeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeMapLayout.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeMapLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeMapToPolyData.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeOrbitLayoutStrategy.cxx" />
+    <ClCompile Include="..\..\..\Infovis\Layout\vtkTreeRingToPolyData.cxx" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkArcParallelEdgeStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkAreaLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkAreaLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkAssignCoordinates.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkAssignCoordinatesLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkAttributeClustering2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkBoxLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCirclePackFrontChainLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCirclePackLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCirclePackLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCirclePackToPolyData.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCircularLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkClustering2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCommunity2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkConeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkConstrained2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkCosmicTreeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkEdgeLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkEdgeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkFast2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkForceDirectedLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkGeoEdgeStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkGeoMath.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkGraphLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkGraphLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkIncrementalForceLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkKCoreLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkPassThroughEdgeStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkPassThroughLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkPerturbCoincidentVertices.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkRandomLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSimple2DLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSimple3DCirclesStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSliceAndDiceLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSpanTreeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSplineGraphEdges.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkSquarifyLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkStackedTreeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeMapLayout.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeMapLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeMapToPolyData.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeOrbitLayoutStrategy.h" />
+    <ClInclude Include="..\..\..\Infovis\Layout\vtkTreeRingToPolyData.h" />
+    <ClInclude Include=".\vtkInfovisLayoutModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Color\CommonColor.vcxproj">
+      <Project>{A5D91A2D-82BB-34E8-A7F6-2CD7890AB462}</Project>
+      <Name>CommonColor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ComputationalGeometry\CommonComputationalGeometry.vcxproj">
+      <Project>{CC53A450-C5DD-32A7-9ACD-0F3FCF720821}</Project>
+      <Name>CommonComputationalGeometry</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\CommonExecutionModel.vcxproj">
+      <Project>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</Project>
+      <Name>CommonExecutionModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\System\CommonSystem.vcxproj">
+      <Project>{80353F57-B7C1-3D16-BA1E-07C35F3E06CC}</Project>
+      <Name>CommonSystem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Core\FiltersCore.vcxproj">
+      <Project>{F5457D26-283A-32B2-B438-A168C352576E}</Project>
+      <Name>FiltersCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\General\FiltersGeneral.vcxproj">
+      <Project>{B6AC9500-4E85-3C11-82A1-1ED20D0FBB86}</Project>
+      <Name>FiltersGeneral</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Modeling\FiltersModeling.vcxproj">
+      <Project>{2B3B2E1A-C911-3F23-90CD-E82DBFE85FC8}</Project>
+      <Name>FiltersModeling</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Filters\Sources\FiltersSources.vcxproj">
+      <Project>{9E32B9B0-6E72-310D-8ED3-A6D0FA0900B0}</Project>
+      <Name>FiltersSources</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IO\Image\IOImage.vcxproj">
+      <Project>{8E310ADF-1E6C-381B-BC6C-50C9D996EABE}</Project>
+      <Name>IOImage</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Imaging\Core\ImagingCore.vcxproj">
+      <Project>{2959317B-56BB-3106-99AD-376557B5314D}</Project>
+      <Name>ImagingCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Imaging\Hybrid\ImagingHybrid.vcxproj">
+      <Project>{96D9521F-C980-3E58-8B0D-948E047AF43B}</Project>
+      <Name>ImagingHybrid</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Imaging\Sources\ImagingSources.vcxproj">
+      <Project>{4507633B-72E5-3B0C-B41E-F55A522CBC83}</Project>
+      <Name>ImagingSources</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\InfovisCore.vcxproj">
+      <Project>{34F88407-8E27-31BF-A8F1-0988FCA6E427}</Project>
+      <Name>InfovisCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rendering\Core\RenderingCore.vcxproj">
+      <Project>{7A631ED5-E2CF-3FB6-805D-867AE7D2ADC4}</Project>
+      <Name>RenderingCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rendering\FreeType\RenderingFreeType.vcxproj">
+      <Project>{0D2E045C-83F6-3BED-A091-E3923B4F803E}</Project>
+      <Name>RenderingFreeType</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\freetype\vtkfreetype\freetype.vcxproj">
+      <Project>{B4D09716-C567-36CB-A390-BE731CECA8E8}</Project>
+      <Name>freetype</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\zlib\vtkzlib\zlib.vcxproj">
+      <Project>{7D781F33-03CA-385D-97CC-8116E610A9BB}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7391EFE7-2CE6-388B-97ED-C708F1D04784}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkFiltersGeneric-hierarchy</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.Release.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.Release.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.MinSizeRel.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.MinSizeRel.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating the wrap hierarchy for VTK::FiltersGeneric</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneric-hierarchy.RelWithDebInfo.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt .\CMakeFiles\vtkFiltersGeneric-hierarchy.data @.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneric-hierarchy.txt.rule;..\..\..\Filters\Generic\vtkGenericClip.h;..\..\..\Filters\Generic\vtkGenericContourFilter.h;..\..\..\Filters\Generic\vtkGenericCutter.h;..\..\..\Filters\Generic\vtkGenericDataSetTessellator.h;..\..\..\Filters\Generic\vtkGenericGeometryFilter.h;..\..\..\Filters\Generic\vtkGenericGlyph3DFilter.h;..\..\..\Filters\Generic\vtkGenericOutlineFilter.h;..\..\..\Filters\Generic\vtkGenericProbeFilter.h;..\..\..\Filters\Generic\vtkGenericStreamTracer.h;.\vtkFiltersGenericModule.h;.\CMakeFiles\vtkFiltersGeneric-hierarchy.RelWithDebInfo.args;.\CMakeFiles\vtkFiltersGeneric-hierarchy.data;.\CMakeFiles\vtkFiltersGeneric-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\99ffd1f57636bb7b6c7e84235f9445c0\vtkFiltersGeneric-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneric-hierarchy.txt;..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.\CMakeFiles\vtkFiltersGeneric-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkFiltersGeneric-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrapping\Tools\WrapHierarchy.vcxproj">
+      <Project>{4ADB90CE-A44B-3A81-A94A-6CB421A7FA3D}</Project>
+      <Name>WrapHierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\vtkCommonExecutionModel-hierarchy.vcxproj">
+      <Project>{B546BE43-BA7B-3236-995C-DA7CB96E54AC}</Project>
+      <Name>vtkCommonExecutionModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\vtkCommonMath-hierarchy.vcxproj">
+      <Project>{1B1BC81A-2FF1-3562-9D93-F52447CC212A}</Project>
+      <Name>vtkCommonMath-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

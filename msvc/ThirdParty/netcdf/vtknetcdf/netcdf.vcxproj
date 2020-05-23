@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0DD13A9B-98CC-3F0A-9550-05BD84380238}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>netcdf</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtknetcdf-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtknetcdf-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtknetcdf-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtknetcdf-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Debug\";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libdispatch;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc4;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";netcdf_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkhdf5-9.0d.lib;vtkhdf5_hl-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtknetcdf-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Debug\";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libdispatch;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc4;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Debug";netcdf_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkhdf5-9.0d.lib;vtkhdf5_hl-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtknetcdf-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Release\";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libdispatch;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc4;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";netcdf_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtknetcdf-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR=\"Release\";netcdf_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libdispatch;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf\vtknetcdf\libsrc4;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf\vtknetcdf\include;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5\vtkhdf5\hl\src;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\netcdf;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\hdf5;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\hdf5;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_mpi=0;HAVE_CONFIG_H;DLL_EXPORT;DLL_NETCDF;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;H5_BUILT_AS_DYNAMIC_LIB;CMAKE_INTDIR="Release";netcdf_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\ThirdParty\netcdf\vtknetcdf;..\..\..\..\ThirdParty\netcdf\vtknetcdf\include;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc;..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4;.\include;..\..\hdf5\vtkhdf5;..\..\..\..\ThirdParty\hdf5\vtkhdf5;..\..\hdf5\vtkhdf5\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\src;..\..\hdf5\vtkhdf5\hl\src;..\..\..\..\ThirdParty\hdf5\vtkhdf5\hl\src;..\;..\..\..\..\ThirdParty\netcdf;..\..\hdf5;..\..\..\..\ThirdParty\hdf5;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtknetcdf-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\crc32.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\datt.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dattget.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dattinq.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dattput.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dauth.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\daux.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dcompound.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dcopy.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\ddim.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\ddispatch.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\denum.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\derror.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dfile.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dgroup.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dinfermodel.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dinternal.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dnotnc3.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dnotnc4.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\doffsets.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dopaque.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dparallel.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\drc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dreadonly.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dstring.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dtype.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dutf8.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dutil.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dvar.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dvarget.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dvarinq.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dvarput.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dvlen.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\dwinpath.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\ncbytes.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nchashmap.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nclist.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nclistmgr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nclog.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\nctime.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\ncuri.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libdispatch\utf8proc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\liblib\nc_initialize.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\dim.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\lookup3.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\memio.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\nc3dispatch.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\nc3internal.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\ncio.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\ncx.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\posixio.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\putget.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\v1hpg.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc\var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\error4.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4dim.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4dispatch.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4grp.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4internal.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4printer.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4type.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\nc4var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\ncfunc.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libsrc4\ncindex.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\nc4hdf.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\nc4info.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5file.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5attr.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5dim.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5grp.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5type.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5internal.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5create.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5open.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5var.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\nc4mem.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\nc4memcb.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5cache.c" />
+    <ClCompile Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\libhdf5\hdf5dispatch.c" />
+    <ClInclude Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\include\netcdf.h" />
+    <ClInclude Include="..\..\..\..\ThirdParty\netcdf\vtknetcdf\include\vtk_netcdf_mangle.h" />
+    <ClInclude Include=".\include\netcdf_meta.h" />
+    <ClInclude Include=".\vtk_netcdf_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\hdf5\vtkhdf5\hl\src\vtkhdf5_hl_src.vcxproj">
+      <Project>{988191A1-6331-3CCD-8332-D9BF1D1B2234}</Project>
+      <Name>vtkhdf5_hl_src</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\hdf5\vtkhdf5\src\vtkhdf5_src.vcxproj">
+      <Project>{2F71E264-6682-3CF6-A9FE-A082B8A928ED}</Project>
+      <Name>vtkhdf5_src</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

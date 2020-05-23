@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DB099679-C450-34F4-8C1A-753A19C72935}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>CommonDataModel</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonDataModel-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkCommonDataModel-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonDataModel-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkCommonDataModel-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonDataModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkpugixml-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonDataModel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";CommonDataModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonSystem-9.0d.lib;vtkpugixml-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonDataModel-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonDataModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkpugixml-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonDataModel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";CommonDataModel_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\System;C:\Development\op3d_active\VTK-9.0.1\Common\System;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml\vtkpugixml;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\pugixml;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\pugixml;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";CommonDataModel_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Common\DataModel;..\Core;..\..\..\Common\Core;..\Math;..\..\..\Common\Math;..\Transforms;..\..\..\Common\Transforms;..\Misc;..\..\..\Common\Misc;..\System;..\..\..\Common\System;..\..\ThirdParty\pugixml\vtkpugixml;..\..\..\ThirdParty\pugixml\vtkpugixml;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\pugixml;..\..\..\ThirdParty\pugixml;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkpugixml-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkCommonDataModel-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAMRBox.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAMRUtilities.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAbstractCellLinks.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAbstractCellLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAbstractElectronicData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAbstractPointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAdjacentVertexIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAnimationScene.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAnnotation.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAnnotationLayers.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkArrayData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAtom.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAttributesErrorMetric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBSPCuts.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBSPIntersections.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierCurve.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierInterpolation.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierQuadrilateral.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierTetra.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBezierWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBiQuadraticQuad.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBiQuadraticQuadraticHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBiQuadraticQuadraticWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBiQuadraticTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBond.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBoundingBox.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkBox.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCell.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCell3D.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellArray.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellArrayIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellLinks.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellLocatorStrategy.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCellTypes.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkClosestNPointsStrategy.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkClosestPointStrategy.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCompositeDataIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCompositeDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCone.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkConvexPointSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCubicLine.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkCylinder.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataAssembly.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataObject.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataObjectCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataObjectTree.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataObjectTreeIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataObjectTypes.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataSetAttributes.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataSetAttributesFieldList.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataSetCellIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDataSetCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDirectedAcyclicGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDirectedGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkDistributedGraphHelper.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkEdgeListIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkEdgeTable.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkEmptyCell.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkExplicitStructuredGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkExtractStructuredGridHelper.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkFieldData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkFindCellStrategy.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericAdaptorCell.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericAttribute.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericAttributeCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericCell.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericCellIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericCellTessellator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericEdgeTable.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericInterpolatedVelocityField.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericPointIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGenericSubdivisionErrorMetric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGeometricErrorMetric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGraphEdge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkGraphInternals.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHexagonalPrism.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHierarchicalBoxDataIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHierarchicalBoxDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderCurve.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderInterpolation.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderQuadrilateral.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderTetra.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHigherOrderWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTree.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridEntry.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridGeometryEntry.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridGeometryLevelEntry.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridLevelEntry.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedGeometryCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedMooreSuperCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedMooreSuperCursorLight.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedSuperCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedSuperCursorLight.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedVonNeumannSuperCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedVonNeumannSuperCursorLight.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridOrientedCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkHyperTreeGridOrientedGeometryCursor.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImageData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImageIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImageTransform.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitBoolean.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitFunction.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitFunctionCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitHalo.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitSelectionLoop.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitSum.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitVolume.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkImplicitWindowFunction.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkInEdgeIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkIncrementalOctreeNode.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkIncrementalOctreePointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkIncrementalPointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkInformationQuadratureSchemeDefinitionVectorKey.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkIterativeClosestPointTransform.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkKdNode.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkKdTree.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkKdTreePointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeCurve.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeInterpolation.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeQuadrilateral.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeTetra.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLagrangeWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLine.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMarchingCubesTriangleCases.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMarchingSquaresLineCases.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMeanValueCoordinatesInterpolator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMergePoints.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMolecule.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMultiBlockDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMultiPieceDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMutableDirectedGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkMutableUndirectedGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkNonLinearCell.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkNonMergingPointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkOctreePointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkOctreePointLocatorNode.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkOrderedTriangulator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkOutEdgeIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPartitionedDataSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPartitionedDataSetCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPath.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPentagonalPrism.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPerlinNoise.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPiecewiseFunction.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPixel.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPixelExtent.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPixelTransfer.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPlane.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPlaneCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPlanes.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPlanesIntersection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPointData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPointSet.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPointSetCellIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPointsProjectedHull.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyDataCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyLine.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyPlane.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyVertex.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolygon.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPolyhedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkPyramid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuad.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticEdge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticLinearQuad.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticLinearWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticPolygon.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticPyramid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticQuad.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticTetra.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadraticWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadratureSchemeDefinition.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkQuadric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkRectilinearGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkReebGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkReebGraphSimplificationMetric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSelection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSelectionNode.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSimpleCellTessellator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSmoothErrorMetric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSortFieldData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSphere.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSpheres.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSpline.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStaticCellLinks.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStaticCellLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStaticPointLocator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStaticPointLocator2D.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStructuredData.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStructuredExtent.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStructuredGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStructuredPoints.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkStructuredPointsCollection.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkSuperquadric.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTable.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTetra.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTree.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTreeBFSIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTreeDFSIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTreeIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTriQuadraticHexahedron.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTriangle.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkTriangleStrip.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUndirectedGraph.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUniformGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUniformHyperTreeGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUnstructuredGrid.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUnstructuredGridBase.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUnstructuredGridCellIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkVertex.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkVertexListIterator.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkVoxel.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkWedge.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkXMLDataElement.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAMRDataInternals.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkAMRInformation.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkNonOverlappingAMR.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkOverlappingAMR.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUniformGridAMR.cxx" />
+    <ClCompile Include="..\..\..\Common\DataModel\vtkUniformGridAMRDataIterator.cxx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAngularPeriodicDataArray.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkArrayListTemplate.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMappedUnstructuredGrid.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMappedUnstructuredGridCellIterator.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPeriodicDataArray.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticCellLinksTemplate.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticEdgeLocatorTemplate.txx" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellType.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkColor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCompositeDataSetRange.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCompositeDataSetNodeReference.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataArrayDispatcher.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataAssemblyVisitor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectTreeInternals.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectTreeRange.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDispatcher.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDispatcher_Private.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDoubleDispatcher.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridScales.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridTools.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkIntersectionCounter.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyDataInternals.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkRect.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkVector.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkVectorOperators.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAMRBox.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAMRUtilities.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAbstractCellLinks.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAbstractCellLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAbstractElectronicData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAbstractPointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAdjacentVertexIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAnimationScene.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAnnotation.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAnnotationLayers.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkArrayData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAtom.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAttributesErrorMetric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBSPCuts.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBSPIntersections.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierCurve.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierInterpolation.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierQuadrilateral.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierTetra.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBezierWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBiQuadraticQuad.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBiQuadraticQuadraticHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBiQuadraticQuadraticWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBiQuadraticTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBond.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBoundingBox.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkBox.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCell.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCell3D.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellArray.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellArrayIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellLinks.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellLocatorStrategy.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCellTypes.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkClosestNPointsStrategy.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkClosestPointStrategy.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCompositeDataIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCompositeDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCone.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkConvexPointSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCubicLine.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkCylinder.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataAssembly.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObject.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectTree.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectTreeIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataObjectTypes.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataSetAttributes.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataSetAttributesFieldList.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataSetCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDataSetCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDirectedAcyclicGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDirectedGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkDistributedGraphHelper.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkEdgeListIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkEdgeTable.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkEmptyCell.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkExplicitStructuredGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkExtractStructuredGridHelper.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkFieldData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkFindCellStrategy.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericAdaptorCell.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericAttribute.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericAttributeCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericCell.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericCellTessellator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericEdgeTable.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericInterpolatedVelocityField.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericPointIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGenericSubdivisionErrorMetric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGeometricErrorMetric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGraphEdge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkGraphInternals.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHexagonalPrism.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHierarchicalBoxDataIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHierarchicalBoxDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderCurve.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderInterpolation.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderQuadrilateral.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderTetra.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHigherOrderWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTree.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridEntry.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridGeometryEntry.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridGeometryLevelEntry.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridLevelEntry.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedGeometryCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedMooreSuperCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedMooreSuperCursorLight.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedSuperCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedSuperCursorLight.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedVonNeumannSuperCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridNonOrientedVonNeumannSuperCursorLight.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridOrientedCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkHyperTreeGridOrientedGeometryCursor.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImageData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImageIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImageTransform.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitBoolean.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitFunction.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitFunctionCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitHalo.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitSelectionLoop.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitSum.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitVolume.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkImplicitWindowFunction.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkInEdgeIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkIncrementalOctreeNode.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkIncrementalOctreePointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkIncrementalPointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkInformationQuadratureSchemeDefinitionVectorKey.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkIterativeClosestPointTransform.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkKdNode.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkKdTree.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkKdTreePointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeCurve.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeInterpolation.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeQuadrilateral.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeTetra.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLagrangeWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLine.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMarchingCubesTriangleCases.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMarchingSquaresLineCases.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMeanValueCoordinatesInterpolator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMergePoints.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMolecule.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMultiBlockDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMultiPieceDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMutableDirectedGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMutableUndirectedGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkNonLinearCell.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkNonMergingPointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkOctreePointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkOctreePointLocatorNode.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkOrderedTriangulator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkOutEdgeIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPartitionedDataSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPartitionedDataSetCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPath.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPentagonalPrism.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPerlinNoise.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPiecewiseFunction.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPixel.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPixelExtent.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPixelTransfer.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPlane.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPlaneCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPlanes.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPlanesIntersection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPointData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPointSet.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPointSetCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPointsProjectedHull.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyDataCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyLine.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyPlane.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyVertex.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolygon.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPolyhedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPyramid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuad.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticEdge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticLinearQuad.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticLinearWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticPolygon.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticPyramid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticQuad.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticTetra.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadraticWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadratureSchemeDefinition.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkQuadric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkRectilinearGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkReebGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkReebGraphSimplificationMetric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSelection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSelectionNode.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSimpleCellTessellator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSmoothErrorMetric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSortFieldData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSphere.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSpheres.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSpline.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticCellLinks.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticCellLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticPointLocator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticPointLocator2D.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStructuredData.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStructuredExtent.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStructuredGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStructuredPoints.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStructuredPointsCollection.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkSuperquadric.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTable.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTetra.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTree.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTreeBFSIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTreeDFSIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTreeIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTriQuadraticHexahedron.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTriangle.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkTriangleStrip.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUndirectedGraph.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUniformGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUniformHyperTreeGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUnstructuredGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUnstructuredGridBase.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUnstructuredGridCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkVertex.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkVertexListIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkVoxel.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkWedge.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkXMLDataElement.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAMRDataInternals.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAMRInformation.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkNonOverlappingAMR.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkOverlappingAMR.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUniformGridAMR.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkUniformGridAMRDataIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkAngularPeriodicDataArray.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkArrayListTemplate.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMappedUnstructuredGrid.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkMappedUnstructuredGridCellIterator.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkPeriodicDataArray.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticCellLinksTemplate.h" />
+    <ClInclude Include="..\..\..\Common\DataModel\vtkStaticEdgeLocatorTemplate.h" />
+    <ClInclude Include=".\vtkCommonDataModelModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\System\CommonSystem.vcxproj">
+      <Project>{80353F57-B7C1-3D16-BA1E-07C35F3E06CC}</Project>
+      <Name>CommonSystem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\pugixml\vtkpugixml\pugixml.vcxproj">
+      <Project>{E71D7E3D-AF6D-30E5-9945-29883C7E0558}</Project>
+      <Name>pugixml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

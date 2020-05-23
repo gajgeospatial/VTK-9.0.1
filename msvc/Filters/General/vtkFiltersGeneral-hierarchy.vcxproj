@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7E37FE08-601C-3358-98DD-037B65FE7F08}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkFiltersGeneral-hierarchy</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.Release.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.Release.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.MinSizeRel.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.MinSizeRel.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating the wrap hierarchy for VTK::FiltersGeneral</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersGeneral-hierarchy.RelWithDebInfo.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt .\CMakeFiles\vtkFiltersGeneral-hierarchy.data @.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersGeneral-hierarchy.txt.rule;..\..\..\Filters\General\vtkAnnotationLink.h;..\..\..\Filters\General\vtkAppendLocationAttributes.h;..\..\..\Filters\General\vtkAppendPoints.h;..\..\..\Filters\General\vtkApproximatingSubdivisionFilter.h;..\..\..\Filters\General\vtkAreaContourSpectrumFilter.h;..\..\..\Filters\General\vtkAxes.h;..\..\..\Filters\General\vtkBlankStructuredGrid.h;..\..\..\Filters\General\vtkBlankStructuredGridWithImage.h;..\..\..\Filters\General\vtkBlockIdScalars.h;..\..\..\Filters\General\vtkBooleanOperationPolyDataFilter.h;..\..\..\Filters\General\vtkBoxClipDataSet.h;..\..\..\Filters\General\vtkBrownianPoints.h;..\..\..\Filters\General\vtkCellDerivatives.h;..\..\..\Filters\General\vtkCellTreeLocator.h;..\..\..\Filters\General\vtkCellValidator.h;..\..\..\Filters\General\vtkClipClosedSurface.h;..\..\..\Filters\General\vtkClipConvexPolyData.h;..\..\..\Filters\General\vtkClipDataSet.h;..\..\..\Filters\General\vtkClipVolume.h;..\..\..\Filters\General\vtkCoincidentPoints.h;..\..\..\Filters\General\vtkContourTriangulator.h;..\..\..\Filters\General\vtkCountFaces.h;..\..\..\Filters\General\vtkCountVertices.h;..\..\..\Filters\General\vtkCursor2D.h;..\..\..\Filters\General\vtkCursor3D.h;..\..\..\Filters\General\vtkCurvatures.h;..\..\..\Filters\General\vtkDataSetGradient.h;..\..\..\Filters\General\vtkDataSetGradientPrecompute.h;..\..\..\Filters\General\vtkDataSetTriangleFilter.h;..\..\..\Filters\General\vtkDateToNumeric.h;..\..\..\Filters\General\vtkDeflectNormals.h;..\..\..\Filters\General\vtkDeformPointSet.h;..\..\..\Filters\General\vtkDensifyPolyData.h;..\..\..\Filters\General\vtkDicer.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges2D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdges3D.h;..\..\..\Filters\General\vtkDiscreteFlyingEdgesClipper2D.h;..\..\..\Filters\General\vtkDiscreteMarchingCubes.h;..\..\..\Filters\General\vtkDistancePolyDataFilter.h;..\..\..\Filters\General\vtkEdgePoints.h;..\..\..\Filters\General\vtkExtractArray.h;..\..\..\Filters\General\vtkExtractSelectedFrustum.h;..\..\..\Filters\General\vtkExtractSelectionBase.h;..\..\..\Filters\General\vtkGradientFilter.h;..\..\..\Filters\General\vtkGraphLayoutFilter.h;..\..\..\Filters\General\vtkGraphToPoints.h;..\..\..\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h;..\..\..\Filters\General\vtkGraphWeightFilter.h;..\..\..\Filters\General\vtkHierarchicalDataLevelFilter.h;..\..\..\Filters\General\vtkHyperStreamline.h;..\..\..\Filters\General\vtkIconGlyphFilter.h;..\..\..\Filters\General\vtkImageDataToPointSet.h;..\..\..\Filters\General\vtkImageMarchingCubes.h;..\..\..\Filters\General\vtkInterpolateDataSetAttributes.h;..\..\..\Filters\General\vtkInterpolatingSubdivisionFilter.h;..\..\..\Filters\General\vtkIntersectionPolyDataFilter.h;..\..\..\Filters\General\vtkLevelIdScalars.h;..\..\..\Filters\General\vtkLinkEdgels.h;..\..\..\Filters\General\vtkLoopBooleanPolyDataFilter.h;..\..\..\Filters\General\vtkMarchingContourFilter.h;..\..\..\Filters\General\vtkMatricizeArray.h;..\..\..\Filters\General\vtkMergeArrays.h;..\..\..\Filters\General\vtkMergeCells.h;..\..\..\Filters\General\vtkMultiBlockDataGroupFilter.h;..\..\..\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h;..\..\..\Filters\General\vtkMultiBlockMergeFilter.h;..\..\..\Filters\General\vtkMultiThreshold.h;..\..\..\Filters\General\vtkNormalizeMatrixVectors.h;..\..\..\Filters\General\vtkOBBDicer.h;..\..\..\Filters\General\vtkOBBTree.h;..\..\..\Filters\General\vtkOverlappingAMRLevelIdScalars.h;..\..\..\Filters\General\vtkPassArrays.h;..\..\..\Filters\General\vtkPassSelectedArrays.h;..\..\..\Filters\General\vtkPassThrough.h;..\..\..\Filters\General\vtkPointConnectivityFilter.h;..\..\..\Filters\General\vtkPolyDataStreamer.h;..\..\..\Filters\General\vtkPolyDataToReebGraphFilter.h;..\..\..\Filters\General\vtkProbePolyhedron.h;..\..\..\Filters\General\vtkQuadraturePointInterpolator.h;..\..\..\Filters\General\vtkQuadraturePointsGenerator.h;..\..\..\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h;..\..\..\Filters\General\vtkQuantizePolyDataPoints.h;..\..\..\Filters\General\vtkRandomAttributeGenerator.h;..\..\..\Filters\General\vtkRectilinearGridClip.h;..\..\..\Filters\General\vtkRectilinearGridToPointSet.h;..\..\..\Filters\General\vtkRectilinearGridToTetrahedra.h;..\..\..\Filters\General\vtkRecursiveDividingCubes.h;..\..\..\Filters\General\vtkReflectionFilter.h;..\..\..\Filters\General\vtkRotationFilter.h;..\..\..\Filters\General\vtkSampleImplicitFunctionFilter.h;..\..\..\Filters\General\vtkShrinkFilter.h;..\..\..\Filters\General\vtkShrinkPolyData.h;..\..\..\Filters\General\vtkSpatialRepresentationFilter.h;..\..\..\Filters\General\vtkSplineFilter.h;..\..\..\Filters\General\vtkSplitByCellScalarFilter.h;..\..\..\Filters\General\vtkSplitColumnComponents.h;..\..\..\Filters\General\vtkSplitField.h;..\..\..\Filters\General\vtkStructuredGridClip.h;..\..\..\Filters\General\vtkSubPixelPositionEdgels.h;..\..\..\Filters\General\vtkSubdivisionFilter.h;..\..\..\Filters\General\vtkSynchronizeTimeFilter.h;..\..\..\Filters\General\vtkTableBasedClipDataSet.h;..\..\..\Filters\General\vtkTableToPolyData.h;..\..\..\Filters\General\vtkTableToStructuredGrid.h;..\..\..\Filters\General\vtkTemporalPathLineFilter.h;..\..\..\Filters\General\vtkTemporalStatistics.h;..\..\..\Filters\General\vtkTessellatorFilter.h;..\..\..\Filters\General\vtkTimeSourceExample.h;..\..\..\Filters\General\vtkTransformFilter.h;..\..\..\Filters\General\vtkTransformPolyDataFilter.h;..\..\..\Filters\General\vtkUncertaintyTubeFilter.h;..\..\..\Filters\General\vtkVertexGlyphFilter.h;..\..\..\Filters\General\vtkVolumeContourSpectrumFilter.h;..\..\..\Filters\General\vtkVoxelContoursToSurfaceFilter.h;..\..\..\Filters\General\vtkWarpLens.h;..\..\..\Filters\General\vtkWarpScalar.h;..\..\..\Filters\General\vtkWarpTo.h;..\..\..\Filters\General\vtkWarpVector.h;..\..\..\Filters\General\vtkYoungsMaterialInterface.h;.\vtkFiltersGeneralModule.h;.\CMakeFiles\vtkFiltersGeneral-hierarchy.RelWithDebInfo.args;.\CMakeFiles\vtkFiltersGeneral-hierarchy.data;.\CMakeFiles\vtkFiltersGeneral-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\84897614e1725d48892c76052f772e78\vtkFiltersGeneral-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersGeneral-hierarchy.txt;..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.\CMakeFiles\vtkFiltersGeneral-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkFiltersGeneral-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrapping\Tools\WrapHierarchy.vcxproj">
+      <Project>{4ADB90CE-A44B-3A81-A94A-6CB421A7FA3D}</Project>
+      <Name>WrapHierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\vtkCommonCore-hierarchy.vcxproj">
+      <Project>{D546C63D-5203-3818-948E-C9FEE2851946}</Project>
+      <Name>vtkCommonCore-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\vtkCommonDataModel-hierarchy.vcxproj">
+      <Project>{59F4C793-7720-34CA-B1F7-4C80860B8518}</Project>
+      <Name>vtkCommonDataModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\vtkCommonExecutionModel-hierarchy.vcxproj">
+      <Project>{B546BE43-BA7B-3236-995C-DA7CB96E54AC}</Project>
+      <Name>vtkCommonExecutionModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\vtkCommonMisc-hierarchy.vcxproj">
+      <Project>{26EE0EF0-6609-382D-A7B2-01303CC75638}</Project>
+      <Name>vtkCommonMisc-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\vtkFiltersCore-hierarchy.vcxproj">
+      <Project>{E8DEC775-9105-329C-BFBD-406CBBE9FE46}</Project>
+      <Name>vtkFiltersCore-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

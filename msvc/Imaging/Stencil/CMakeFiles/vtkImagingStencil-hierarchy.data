@@ -1,0 +1,8 @@
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkImageStencil.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkImageStencilToImage.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkImageToImageStencil.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkImplicitFunctionToImageStencil.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkLassoStencilSource.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkPolyDataToImageStencil.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/Imaging/Stencil/vtkROIStencilSource.h;vtkImagingStencil
+C:/Development/op3d_active/VTK-9.0.1/msvc/Imaging/Stencil/vtkImagingStencilModule.h;vtkImagingStencil

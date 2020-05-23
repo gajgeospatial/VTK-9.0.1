@@ -1,0 +1,1 @@
+This project should be installed as VTK_DIR with ProjectTool.

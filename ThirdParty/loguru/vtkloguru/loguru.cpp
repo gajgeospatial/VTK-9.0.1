@@ -1,4 +1,5 @@
 // Disable all warnings from gcc/clang:
+#ifndef _MSC_VER
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wpragmas"
 
@@ -15,7 +16,7 @@
 #pragma GCC diagnostic ignored "-Wunknown-pragmas"
 #pragma GCC diagnostic ignored "-Wunused-macros"
 #pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
-
+#endif
 #include "loguru.hpp"
 
 #ifndef LOGURU_HAS_BEEN_IMPLEMENTED

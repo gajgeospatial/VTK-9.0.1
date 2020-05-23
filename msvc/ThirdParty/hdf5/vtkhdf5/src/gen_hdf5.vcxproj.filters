@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\CMakeFiles\3c9a605b0a79c39e154496e69ffe6faa\H5Tinit.c.rule" />
+    <CustomBuild Include="..\..\..\..\CMakeFiles\3c9a605b0a79c39e154496e69ffe6faa\H5lib_settings.c.rule" />
+    <CustomBuild Include="..\..\..\..\CMakeFiles\0178985950f52a417be393ee803959c3\gen_hdf5.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\gen_hdf5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

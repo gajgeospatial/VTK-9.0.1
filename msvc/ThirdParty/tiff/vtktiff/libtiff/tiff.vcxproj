@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{620A61A5-59D6-3503-8C8B-CC16239B77BC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>tiff</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtktiff-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtktiff-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtktiff-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtktiff-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";tiff_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkjpeg-9.0d.lib;vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtktiff-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";tiff_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkjpeg-9.0d.lib;vtkzlib-9.0d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtktiff-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";tiff_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkjpeg-9.0.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtktiff-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";tiff_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff\vtktiff\libtiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg\vtkjpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib\vtkzlib;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\tiff;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\jpeg;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\zlib;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\zlib;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";tiff_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff;..\..\..\jpeg\vtkjpeg;..\..\..\..\..\ThirdParty\jpeg\vtkjpeg;..\..\..\zlib\vtkzlib;..\..\..\..\..\ThirdParty\zlib\vtkzlib;..\..\;..\..\..\..\..\ThirdParty\tiff;..\..\..\jpeg;..\..\..\..\..\ThirdParty\jpeg;..\..\..\zlib;..\..\..\..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkjpeg-9.0.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtktiff-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_aux.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_close.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_codec.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_color.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_compress.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_dir.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_dirread.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_error.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_extension.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_fax3.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_flush.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_getimage.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_jbig.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_jpeg.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_jpeg_12.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_luv.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_lzma.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_lzw.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_next.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_open.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_packbits.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_predict.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_print.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_read.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_strip.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_swab.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_thunder.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_tile.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_version.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_warning.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_webp.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_write.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_zip.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_zstd.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tif_win32.c" />
+    <ClCompile Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\port\dummy.c" />
+    <ClInclude Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\port\libport.h" />
+    <ClInclude Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tiff.h" />
+    <ClInclude Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tiffio.h" />
+    <ClInclude Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\tiffvers.h" />
+    <ClInclude Include="..\..\..\..\..\ThirdParty\tiff\vtktiff\libtiff\vtk_tiff_mangle.h" />
+    <ClInclude Include=".\tiffconf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\jpeg\vtkjpeg\jpeg.vcxproj">
+      <Project>{520332E3-523B-3AF7-9BAA-F69E1492E2D0}</Project>
+      <Name>jpeg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\zlib\vtkzlib\zlib.vcxproj">
+      <Project>{7D781F33-03CA-385D-97CC-8116E610A9BB}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

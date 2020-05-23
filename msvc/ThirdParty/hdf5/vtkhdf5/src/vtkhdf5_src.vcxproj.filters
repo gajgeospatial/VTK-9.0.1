@@ -1,0 +1,1411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5checksum.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5dbg.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5system.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5timer.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5trace.c">
+      <Filter>H5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5A.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Abtree2.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Adense.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Adeprec.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Aint.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Atest.c">
+      <Filter>H5A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5AC.c">
+      <Filter>H5AC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACdbg.c">
+      <Filter>H5AC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACmpio.c">
+      <Filter>H5AC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACproxy_entry.c">
+      <Filter>H5AC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B.c">
+      <Filter>H5B</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Bcache.c">
+      <Filter>H5B</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Bdbg.c">
+      <Filter>H5B</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2cache.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2dbg.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2hdr.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2int.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2internal.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2leaf.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2stat.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2test.c">
+      <Filter>H5B2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5C.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cdbg.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cepoch.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cimage.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Clog.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Clog_json.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Clog_trace.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cmpio.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cprefetched.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cquery.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ctag.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ctest.c">
+      <Filter>H5C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5CS.c">
+      <Filter>H5CS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5CX.c">
+      <Filter>H5CX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5D.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dbtree.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dbtree2.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dchunk.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dcompact.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dcontig.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ddbg.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ddeprec.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dearray.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Defl.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dfarray.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dfill.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dint.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dio.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dlayout.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dmpio.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dnone.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Doh.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dscatgath.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dselect.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dsingle.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dtest.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dvirtual.c">
+      <Filter>H5D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5E.c">
+      <Filter>H5E</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Edeprec.c">
+      <Filter>H5E</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Eint.c">
+      <Filter>H5E</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EA.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAcache.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAdbg.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAdblkpage.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAdblock.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAhdr.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAiblock.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAint.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAsblock.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAstat.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAtest.c">
+      <Filter>H5EA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5F.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Faccum.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fcwfs.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fdbg.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fdeprec.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fefc.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ffake.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fint.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fio.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fmount.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fmpi.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fquery.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fsfile.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fspace.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fsuper.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fsuper_cache.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ftest.c">
+      <Filter>H5F</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FA.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAcache.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAdbg.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAdblkpage.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAdblock.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAhdr.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAint.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAstat.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAtest.c">
+      <Filter>H5FA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FD.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDcore.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDdirect.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDfamily.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDhdfs.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDint.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDlog.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmpi.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmpio.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmulti.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDros3.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDs3comms.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDsec2.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDspace.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDstdio.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDtest.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDwindows.c">
+      <Filter>H5FD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FL.c">
+      <Filter>H5FL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FO.c">
+      <Filter>H5FO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FS.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FScache.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSdbg.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSint.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSsection.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSstat.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FStest.c">
+      <Filter>H5FS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5G.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gbtree2.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gcache.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gcompact.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gdense.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gdeprec.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gent.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gint.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Glink.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gloc.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gname.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gnode.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gobj.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Goh.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Groot.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gstab.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gtest.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gtraverse.c">
+      <Filter>H5G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HF.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFbtree2.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFcache.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFdbg.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFdblock.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFdtable.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFhdr.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFhuge.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFiblock.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFiter.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFman.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFsection.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFspace.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFstat.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFtest.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFtiny.c">
+      <Filter>H5HF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HG.c">
+      <Filter>H5HG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HGcache.c">
+      <Filter>H5HG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HGdbg.c">
+      <Filter>H5HG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HGquery.c">
+      <Filter>H5HG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HL.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLcache.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLdbg.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLdblk.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLint.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLprfx.c">
+      <Filter>H5HL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HP.c">
+      <Filter>H5HP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5I.c">
+      <Filter>H5I</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Itest.c">
+      <Filter>H5I</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5L.c">
+      <Filter>H5L</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Lexternal.c">
+      <Filter>H5L</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MF.c">
+      <Filter>H5MF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MFaggr.c">
+      <Filter>H5MF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MFdbg.c">
+      <Filter>H5MF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MFsection.c">
+      <Filter>H5MF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MM.c">
+      <Filter>H5MM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MP.c">
+      <Filter>H5MP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MPtest.c">
+      <Filter>H5MP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5O.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oainfo.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oalloc.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oattr.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oattribute.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Obogus.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Obtreek.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ocache.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ocache_image.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ochunk.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ocont.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ocopy.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Odbg.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Odeprec.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Odrvinfo.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Odtype.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oefl.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ofill.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oflush.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ofsinfo.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oginfo.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oint.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Olayout.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Olinfo.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Olink.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Omessage.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Omtime.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oname.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Onull.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Opline.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Orefcount.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Osdspace.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oshared.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oshmesg.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ostab.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Otest.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ounknown.c">
+      <Filter>H5O</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5P.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pacpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pdapl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pdcpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pdeprec.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pdxpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pencdec.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pfapl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pfcpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pfmpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pgcpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pint.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Plapl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Plcpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pocpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pocpypl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pstrcpl.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ptest.c">
+      <Filter>H5P</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PB.c">
+      <Filter>H5PB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PL.c">
+      <Filter>H5PL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLint.c">
+      <Filter>H5PL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLpath.c">
+      <Filter>H5PL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLplugin_cache.c">
+      <Filter>H5PL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5R.c">
+      <Filter>H5R</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Rdeprec.c">
+      <Filter>H5R</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Rint.c">
+      <Filter>H5R</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5UC.c">
+      <Filter>H5UC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5RS.c">
+      <Filter>H5RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5S.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Sall.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Sdbg.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Shyper.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Smpio.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Snone.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Spoint.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Sselect.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Stest.c">
+      <Filter>H5S</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SL.c">
+      <Filter>H5SL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SM.c">
+      <Filter>H5SM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMbtree2.c">
+      <Filter>H5SM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMcache.c">
+      <Filter>H5SM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMmessage.c">
+      <Filter>H5SM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMtest.c">
+      <Filter>H5SM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ST.c">
+      <Filter>H5ST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5T.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tarray.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tbit.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tcommit.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tcompound.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tconv.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tcset.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tdbg.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tdeprec.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tenum.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tfields.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tfixed.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tfloat.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tnative.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Toffset.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Toh.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Topaque.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Torder.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tpad.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tprecis.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tstrpad.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tvisit.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tvlen.c">
+      <Filter>H5T</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5TS.c">
+      <Filter>H5TS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5VM.c">
+      <Filter>H5VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5WB.c">
+      <Filter>H5WB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Z.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zdeflate.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zfletcher32.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Znbit.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zscaleoffset.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zshuffle.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zszip.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ztrans.c">
+      <Filter>H5Z</Filter>
+    </ClCompile>
+    <ClCompile Include="..\H5Tinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\H5lib_settings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\hdf5.h">
+      <Filter>H5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5api_adpt.h">
+      <Filter>H5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5public.h">
+      <Filter>H5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\vtk_hdf5_mangle.h">
+      <Filter>H5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Apublic.h">
+      <Filter>H5A</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACpublic.h">
+      <Filter>H5AC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cpublic.h">
+      <Filter>H5C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dpublic.h">
+      <Filter>H5D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Epublic.h">
+      <Filter>H5E</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fpublic.h">
+      <Filter>H5F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDcore.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDdirect.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDfamily.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDhdfs.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDlog.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmpi.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmpio.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDmulti.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDpublic.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDros3.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDs3comms.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDsec2.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDstdio.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDwindows.h">
+      <Filter>H5FD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gpublic.h">
+      <Filter>H5G</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ipublic.h">
+      <Filter>H5I</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Lpublic.h">
+      <Filter>H5L</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MMpublic.h">
+      <Filter>H5MM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Opublic.h">
+      <Filter>H5O</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ppublic.h">
+      <Filter>H5P</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLextern.h">
+      <Filter>H5PL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLpublic.h">
+      <Filter>H5PL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Rpublic.h">
+      <Filter>H5R</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Spublic.h">
+      <Filter>H5S</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tpublic.h">
+      <Filter>H5T</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zpublic.h">
+      <Filter>H5Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Apkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Aprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5ACprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Bpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Bprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2pkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5B2private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Clog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Cprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5CSprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5CXprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Dprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Edefin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Einit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Epkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Eprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Eterm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EApkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5EAprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Fprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FApkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FAprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FDprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FLprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FOprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5FSprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Gprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HFprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HGpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HGprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HLprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5HPprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ipkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Iprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Lpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Lprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MFprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MMprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MPpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5MPprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Opkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Oshared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Ppkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Pprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PBprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PBpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5PLprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Rpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Rprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5RSprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Spkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Sprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SLprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5SMprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5STprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Tprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5TSprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5UCprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5VMprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5WBprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zpkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Zprivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5win32defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5Epubgen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\ThirdParty\hdf5\vtkhdf5\src\H5overflow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\CMakeFiles\3c9a605b0a79c39e154496e69ffe6faa\H5Tinit.c.rule" />
+    <CustomBuild Include="..\..\..\..\CMakeFiles\3c9a605b0a79c39e154496e69ffe6faa\H5lib_settings.c.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{108D40E1-183B-3302-BC74-083FC5205818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5">
+      <UniqueIdentifier>{38F1CC0F-E52C-3C25-B270-CCEF1D54DFDC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5A">
+      <UniqueIdentifier>{96587F91-FF4B-3391-8979-2F3C3D824348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5AC">
+      <UniqueIdentifier>{C78AF793-3376-3F38-A1C6-5935CA7710BB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5B">
+      <UniqueIdentifier>{F018E062-D85A-3C96-973D-F8465EBC52E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5B2">
+      <UniqueIdentifier>{163EF4C8-36C1-3DB0-ABA6-3640BEE7E7A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5C">
+      <UniqueIdentifier>{2E16F763-DE01-3280-9240-B5C51D9481B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5CS">
+      <UniqueIdentifier>{FCB1A772-596C-3A8F-AE4E-2685D40BF952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5CX">
+      <UniqueIdentifier>{0E676B3F-E0BB-3F0F-BE8E-48B3BF773B89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5D">
+      <UniqueIdentifier>{ED7ABBD6-BDFF-3D10-8EAD-7955FC62E5FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5E">
+      <UniqueIdentifier>{ED544140-5BAC-3028-8DD5-F2E8678353F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5EA">
+      <UniqueIdentifier>{167A7DFE-C235-3328-9E5A-DF757CC4BFD9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5F">
+      <UniqueIdentifier>{FCEF3C4D-4565-305C-BE4F-441645841038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5FA">
+      <UniqueIdentifier>{A5C8F38C-F2B5-3C88-B93F-207A541F7B09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5FD">
+      <UniqueIdentifier>{086B1118-FDEF-3258-8F72-780B37BD757F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5FL">
+      <UniqueIdentifier>{F2337E92-B47C-39CA-9E38-5DF7DEB766E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5FO">
+      <UniqueIdentifier>{294410F2-C19B-3422-AF52-2752D3CADC6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5FS">
+      <UniqueIdentifier>{B1FB19B6-CB70-38B0-BF6C-E2E993AC876A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5G">
+      <UniqueIdentifier>{3D321B9E-05F5-3965-8CBA-C2B90B5A8C42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5HF">
+      <UniqueIdentifier>{F08561A7-96F6-3823-8D28-049F4A856438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5HG">
+      <UniqueIdentifier>{2AEC9500-7033-36D2-834F-3AA23D2C975D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5HL">
+      <UniqueIdentifier>{F7740D5C-BDA6-3A29-957A-8551B911467C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5HP">
+      <UniqueIdentifier>{573FDFD3-AA14-3E2D-8B31-C7FC3EE4B342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5I">
+      <UniqueIdentifier>{F0B0B099-8E2C-3586-A23F-278D5E4B6D2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5L">
+      <UniqueIdentifier>{581D00CD-7098-37D3-9EA3-9F12C0145A36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5MF">
+      <UniqueIdentifier>{E0AFCBDC-9FD6-3F31-875E-D232B03D37D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5MM">
+      <UniqueIdentifier>{29F0E472-2942-3DBC-8B27-C4CEF1162B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5MP">
+      <UniqueIdentifier>{E0264F64-9669-3B69-8055-1E07A6F228D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5O">
+      <UniqueIdentifier>{50AAEC1F-FA20-3E26-8789-71AE39C3617D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5P">
+      <UniqueIdentifier>{7CDD73DC-8C72-39CD-A75A-1B26B820F2C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5PB">
+      <UniqueIdentifier>{33A00356-1EB2-32EF-BD67-2FA4709771B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5PL">
+      <UniqueIdentifier>{671818C8-1CA8-3321-9573-BB44084AC786}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5R">
+      <UniqueIdentifier>{148E0276-4FE6-38FF-89B5-CAD3439B230B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5RS">
+      <UniqueIdentifier>{87BD0137-5981-3311-B12A-648ECABA45A9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5S">
+      <UniqueIdentifier>{609EBDE8-26C4-3878-BD9D-3481C126CF8E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5SL">
+      <UniqueIdentifier>{89F52F72-550E-3160-8F19-4486B567E61C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5SM">
+      <UniqueIdentifier>{61732921-18EA-3B7C-A568-D47FBDBCF52B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5ST">
+      <UniqueIdentifier>{F79DE0CB-74DC-3C79-AA2D-B49D6A33359F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5T">
+      <UniqueIdentifier>{C879F627-2BBC-3CF6-A95D-44C5B5B05EEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5TS">
+      <UniqueIdentifier>{E588E191-4907-3D3C-BFF6-B1300F6A038F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5UC">
+      <UniqueIdentifier>{79FE2BA6-D7E3-35F0-BE62-FA0A6C902184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5VM">
+      <UniqueIdentifier>{D4821289-9178-3D37-B92C-83B288CA30BB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5WB">
+      <UniqueIdentifier>{61C47A95-0D85-341B-83CC-D6F8EB4756DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="H5Z">
+      <UniqueIdentifier>{02CD4796-C7D1-3AA0-A5AD-3163ACB7D1F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{247F16D2-B3BE-3083-A14F-ECB36CD31502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2F80BAA1-5E15-368D-8A2A-331A107085CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

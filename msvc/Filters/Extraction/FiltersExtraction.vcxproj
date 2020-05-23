@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{386AA377-6958-3C23-8A43-4D3F95047BDA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>FiltersExtraction</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkFiltersExtraction-9.0d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">vtkFiltersExtraction-9.0d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkFiltersExtraction-9.0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">vtkFiltersExtraction-9.0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Debug";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR=\"Debug\";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\diy2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\diy2;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Debug";FiltersExtraction_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersStatistics-9.0d.lib;vtkParallelDIY-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkParallelCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkFiltersExtraction-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Debug";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR=\"Debug\";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\diy2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\diy2;%(Include)</Include>
+      <Defines>_WINDOWS;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Debug";FiltersExtraction_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersStatistics-9.0d.lib;vtkParallelDIY-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkParallelCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkFiltersExtraction-9.0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Release";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR=\"Release\";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\diy2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\diy2;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Release";FiltersExtraction_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersStatistics-9.0.lib;vtkParallelDIY-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkParallelCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkFiltersExtraction-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Release";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR=\"Release\";FiltersExtraction_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\Filters\Extraction;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Core;C:\Development\op3d_active\VTK-9.0.1\Common\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\Common\ExecutionModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\Common\DataModel;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Math;C:\Development\op3d_active\VTK-9.0.1\Common\Math;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\Common\Transforms;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\General;C:\Development\op3d_active\VTK-9.0.1\Filters\General;C:\Development\op3d_active\VTK-9.0.1\msvc\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\Common\Misc;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\Filters\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\Filters\Statistics;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\Parallel\DIY;C:\Development\op3d_active\VTK-9.0.1\msvc\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\Parallel\Core;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWIML;C:\Development\op3d_active\VTK-9.0.1\msvc\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\Utilities\KWSys;C:\Development\op3d_active\VTK-9.0.1\msvc\ThirdParty\diy2;C:\Development\op3d_active\VTK-9.0.1\ThirdParty\diy2;%(Include)</Include>
+      <Defines>_WINDOWS;NDEBUG;VTK_MODULE_ENABLE_VTK_ParallelMPI=0;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;DIY_NO_THREADS;CMAKE_INTDIR="Release";FiltersExtraction_EXPORTS;%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\..\..\Filters\Extraction;..\..\Common\Core;..\..\..\Common\Core;..\..\Common\ExecutionModel;..\..\..\Common\ExecutionModel;..\..\Common\DataModel;..\..\..\Common\DataModel;..\..\Common\Math;..\..\..\Common\Math;..\..\Common\Transforms;..\..\..\Common\Transforms;..\General;..\..\..\Filters\General;..\..\Common\Misc;..\..\..\Common\Misc;..\Core;..\..\..\Filters\Core;..\Statistics;..\..\..\Filters\Statistics;..\..\Parallel\DIY;..\..\..\Parallel\DIY;..\..\Parallel\Core;..\..\..\Parallel\Core;..\..\Utilities\KWIML;..\..\..\Utilities\KWIML;..\..\Utilities\KWSys;..\..\..\Utilities\KWSys;..\..\ThirdParty\diy2;..\..\..\ThirdParty\diy2;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>vtkFiltersStatistics-9.0.lib;vtkParallelDIY-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkParallelCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)vtkFiltersExtraction-9.0.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkBlockSelector.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkConvertSelection.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExpandMarkedElements.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractBlock.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractBlockUsingDataAssembly.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractCells.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractCellsByType.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractDataArraysOverTime.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractDataOverTime.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractDataSets.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractEdges.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractExodusGlobalTemporalVariables.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractGeometry.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractGrid.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractLevel.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractPolyDataGeometry.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractRectilinearGrid.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedArraysOverTime.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedBlock.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedIds.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedLocations.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedPolyDataIds.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedRows.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelectedThresholds.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractSelection.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractTensorComponents.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractTimeSteps.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractUnstructuredGrid.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractVectorComponents.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkFrustumSelector.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkHierarchicalDataExtractDataSets.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkHierarchicalDataExtractLevel.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkLocationSelector.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkProbeSelectedLocations.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkSelector.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkValueSelector.cxx" />
+    <ClCompile Include="..\..\..\Filters\Extraction\vtkExtractTemporalFieldData.cxx" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkBlockSelector.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkConvertSelection.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExpandMarkedElements.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractBlock.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractBlockUsingDataAssembly.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractCells.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractCellsByType.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractDataArraysOverTime.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractDataOverTime.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractDataSets.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractEdges.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractExodusGlobalTemporalVariables.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractGeometry.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractGrid.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractLevel.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractPolyDataGeometry.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractRectilinearGrid.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedArraysOverTime.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedBlock.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedIds.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedLocations.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedPolyDataIds.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedRows.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelectedThresholds.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractSelection.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractTensorComponents.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractTimeSteps.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractUnstructuredGrid.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractVectorComponents.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkFrustumSelector.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkHierarchicalDataExtractDataSets.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkHierarchicalDataExtractLevel.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkLocationSelector.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkProbeSelectedLocations.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkSelector.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkValueSelector.h" />
+    <ClInclude Include="..\..\..\Filters\Extraction\vtkExtractTemporalFieldData.h" />
+    <ClInclude Include=".\vtkFiltersExtractionModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Core\CommonCore.vcxproj">
+      <Project>{0D738E29-2E95-3CA3-84E3-CCD04D78F032}</Project>
+      <Name>CommonCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\DataModel\CommonDataModel.vcxproj">
+      <Project>{DB099679-C450-34F4-8C1A-753A19C72935}</Project>
+      <Name>CommonDataModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\CommonExecutionModel.vcxproj">
+      <Project>{A3F8F11B-FE22-3DF5-A425-AE422BB213EE}</Project>
+      <Name>CommonExecutionModel</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Math\CommonMath.vcxproj">
+      <Project>{7BB0F891-8D22-385B-BB9B-A46B76468EE4}</Project>
+      <Name>CommonMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\CommonMisc.vcxproj">
+      <Project>{340FB609-B7AE-3ADD-BE7D-DBBFC603F7C0}</Project>
+      <Name>CommonMisc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Transforms\CommonTransforms.vcxproj">
+      <Project>{BA54EC33-7B6C-3193-B6D3-FF5771A9C438}</Project>
+      <Name>CommonTransforms</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\FiltersCore.vcxproj">
+      <Project>{F5457D26-283A-32B2-B438-A168C352576E}</Project>
+      <Name>FiltersCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\General\FiltersGeneral.vcxproj">
+      <Project>{B6AC9500-4E85-3C11-82A1-1ED20D0FBB86}</Project>
+      <Name>FiltersGeneral</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics\FiltersStatistics.vcxproj">
+      <Project>{501AA49D-0BAD-3102-9DDF-EB23101DC2A3}</Project>
+      <Name>FiltersStatistics</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Parallel\Core\ParallelCore.vcxproj">
+      <Project>{59A1E35C-3074-3403-A425-43E5A2662EAA}</Project>
+      <Name>ParallelCore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Parallel\DIY\ParallelDIY.vcxproj">
+      <Project>{5741F9E2-3088-3126-ACDC-96B9218AB40E}</Project>
+      <Name>ParallelDIY</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>{5EC4487D-DB37-37CA-842C-6F13EF38C512}</Project>
+      <Name>vtksys</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

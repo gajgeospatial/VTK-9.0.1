@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7290CDA-6178-3624-83D8-4C5BDC8C94C9}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkFiltersPoints-hierarchy</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0d.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.Debug.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.Debug.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+..\..\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.Release.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.Release.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.Release.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.MinSizeRel.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.MinSizeRel.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating the wrap hierarchy for VTK::FiltersPoints</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe @.\CMakeFiles\vtkFiltersPoints-hierarchy.RelWithDebInfo.args -o ..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt .\CMakeFiles\vtkFiltersPoints-hierarchy.data @.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\971d8b14c0b5bc39cfe66ac467934327\vtkFiltersPoints-hierarchy.txt.rule;..\..\..\Filters\Points\vtkBoundedPointSource.h;..\..\..\Filters\Points\vtkConnectedPointsFilter.h;..\..\..\Filters\Points\vtkDensifyPointCloudFilter.h;..\..\..\Filters\Points\vtkEllipsoidalGaussianKernel.h;..\..\..\Filters\Points\vtkEuclideanClusterExtraction.h;..\..\..\Filters\Points\vtkExtractEnclosedPoints.h;..\..\..\Filters\Points\vtkExtractHierarchicalBins.h;..\..\..\Filters\Points\vtkExtractPointCloudPiece.h;..\..\..\Filters\Points\vtkExtractPoints.h;..\..\..\Filters\Points\vtkExtractSurface.h;..\..\..\Filters\Points\vtkFitImplicitFunction.h;..\..\..\Filters\Points\vtkGaussianKernel.h;..\..\..\Filters\Points\vtkGeneralizedKernel.h;..\..\..\Filters\Points\vtkHierarchicalBinningFilter.h;..\..\..\Filters\Points\vtkInterpolationKernel.h;..\..\..\Filters\Points\vtkLinearKernel.h;..\..\..\Filters\Points\vtkMaskPointsFilter.h;..\..\..\Filters\Points\vtkPCACurvatureEstimation.h;..\..\..\Filters\Points\vtkPCANormalEstimation.h;..\..\..\Filters\Points\vtkPointCloudFilter.h;..\..\..\Filters\Points\vtkPointDensityFilter.h;..\..\..\Filters\Points\vtkPointInterpolator.h;..\..\..\Filters\Points\vtkPointInterpolator2D.h;..\..\..\Filters\Points\vtkPointOccupancyFilter.h;..\..\..\Filters\Points\vtkPointSmoothingFilter.h;..\..\..\Filters\Points\vtkProbabilisticVoronoiKernel.h;..\..\..\Filters\Points\vtkRadiusOutlierRemoval.h;..\..\..\Filters\Points\vtkSPHCubicKernel.h;..\..\..\Filters\Points\vtkSPHInterpolator.h;..\..\..\Filters\Points\vtkSPHKernel.h;..\..\..\Filters\Points\vtkSPHQuarticKernel.h;..\..\..\Filters\Points\vtkSPHQuinticKernel.h;..\..\..\Filters\Points\vtkShepardKernel.h;..\..\..\Filters\Points\vtkSignedDistance.h;..\..\..\Filters\Points\vtkStatisticalOutlierRemoval.h;..\..\..\Filters\Points\vtkUnsignedDistance.h;..\..\..\Filters\Points\vtkVoronoiKernel.h;..\..\..\Filters\Points\vtkVoxelGrid.h;..\..\..\Filters\Points\vtkWendlandQuinticKernel.h;.\vtkFiltersPointsModule.h;.\CMakeFiles\vtkFiltersPoints-hierarchy.RelWithDebInfo.args;.\CMakeFiles\vtkFiltersPoints-hierarchy.data;.\CMakeFiles\vtkFiltersPoints-hierarchy.depends.args;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\Debug\vtkWrapHierarchy-9.0d.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\Release\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\MinSizeRel\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\CMakeFiles\12ac09e24c1165dcc3eec12274f8e556\vtkFiltersPoints-hierarchy.rule;..\..\lib\vtk\hierarchy\VTK\vtkFiltersPoints-hierarchy.txt;..\..\bin\RelWithDebInfo\vtkWrapHierarchy-9.0.exe;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.\CMakeFiles\vtkFiltersPoints-hierarchy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\CMakeFiles\vtkFiltersPoints-hierarchy" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrapping\Tools\WrapHierarchy.vcxproj">
+      <Project>{4ADB90CE-A44B-3A81-A94A-6CB421A7FA3D}</Project>
+      <Name>WrapHierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\vtkCommonCore-hierarchy.vcxproj">
+      <Project>{D546C63D-5203-3818-948E-C9FEE2851946}</Project>
+      <Name>vtkCommonCore-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\ExecutionModel\vtkCommonExecutionModel-hierarchy.vcxproj">
+      <Project>{B546BE43-BA7B-3236-995C-DA7CB96E54AC}</Project>
+      <Name>vtkCommonExecutionModel-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Misc\vtkCommonMisc-hierarchy.vcxproj">
+      <Project>{26EE0EF0-6609-382D-A7B2-01303CC75638}</Project>
+      <Name>vtkCommonMisc-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Modeling\vtkFiltersModeling-hierarchy.vcxproj">
+      <Project>{1EAF5041-A53F-3968-B891-8EC982795394}</Project>
+      <Name>vtkFiltersModeling-hierarchy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>
